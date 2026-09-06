@@ -2,38 +2,38 @@
   "sources": [
     {
       "source": "github:org:doka-labs",
-      "status": "preview"
+      "status": "live"
     },
     {
       "source": "github:repositories",
-      "status": "preview"
-    },
-    {
-      "source": "nuget:doka.caching.mysql",
-      "status": "preview"
+      "status": "live"
     },
     {
       "source": "nuget:doka.entityframeworkcore.mysql",
-      "status": "preview"
+      "status": "live"
     },
     {
       "source": "nuget:doka.entityframeworkcore.mysql.nettopologysuite",
-      "status": "preview"
+      "status": "live"
+    },
+    {
+      "source": "nuget:doka.caching.mysql",
+      "status": "live"
     },
     {
       "source": "nuget:doka.entityframeworkcore.safemigrations",
-      "status": "preview"
+      "status": "live"
     },
     {
       "source": "nuget:doka.entityframeworkcore.safemigrations.mysql",
-      "status": "preview"
+      "status": "live"
     },
     {
       "source": "nuget:doka.entityframeworkcore.safemigrations.postgresql",
-      "status": "preview"
+      "status": "live"
     }
   ],
-  "mode": "preview",
+  "mode": "live",
   "fetched_at": "",
   "user": {
     "login": "",
@@ -47,48 +47,86 @@
       "login": "doka-labs",
       "display_name": "Doka Labs",
       "profile_url": "https://github.com/doka-labs",
-      "public_repositories": 2,
-      "followers": 0
+      "public_repositories": 3,
+      "followers": 2
     }
   ],
   "repositories": [
     {
       "owner": "doka-labs",
-      "name": "Doka.EntityFrameworkCore.MySql",
-      "full_name": "doka-labs/Doka.EntityFrameworkCore.MySql",
-      "url": "https://github.com/doka-labs/Doka.EntityFrameworkCore.MySql",
-      "description": "Entity Framework Core provider and related data infrastructure for MySQL and MariaDB.",
-      "primary_language": "C#",
-      "topics": [
-        "entity-framework-core",
-        "mysql",
-        "mariadb",
-        "dotnet"
-      ],
+      "name": ".github",
+      "full_name": "doka-labs/.github",
+      "url": "https://github.com/doka-labs/.github",
+      "description": null,
+      "primary_language": "Rust",
+      "topics": [],
       "stars": 0,
       "forks": 0,
       "archived": false,
       "fork": false,
-      "pushed_at": null
+      "pushed_at": "2026-09-06T00:16:13Z"
+    },
+    {
+      "owner": "doka-labs",
+      "name": "Doka.EntityFrameworkCore.MySql",
+      "full_name": "doka-labs/Doka.EntityFrameworkCore.MySql",
+      "url": "https://github.com/doka-labs/Doka.EntityFrameworkCore.MySql",
+      "description": "Production-focused EF Core 10 provider for MySQL 8.4/9.7 LTS and MariaDB 10.11/11.4/11.8/12.3 LTS, with JSON and complex types, temporal tables, CTEs, HiLo/sequences, NetTopologySuite spatial support, advisory-lock-protected migrations, diagnostics, and engine-aware SQL translation.",
+      "primary_language": "C#",
+      "topics": [
+        "common-table-expressions",
+        "database-migrations",
+        "database-provider",
+        "dotnet",
+        "ef-core",
+        "efcore",
+        "efcore-provider",
+        "entity-framework-core",
+        "hilo",
+        "json",
+        "linq",
+        "mariadb",
+        "mariadb-provider",
+        "mysql",
+        "mysql-provider",
+        "nettopologysuite",
+        "nuget",
+        "orm",
+        "spatial",
+        "temporal-tables"
+      ],
+      "stars": 2,
+      "forks": 0,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-09-05T00:09:21Z"
     },
     {
       "owner": "doka-labs",
       "name": "Doka.EntityFrameworkCore.SafeMigrations",
       "full_name": "doka-labs/Doka.EntityFrameworkCore.SafeMigrations",
       "url": "https://github.com/doka-labs/Doka.EntityFrameworkCore.SafeMigrations",
-      "description": "Convergent and deterministic migration safety extensions for Entity Framework Core.",
+      "description": "Safe, convergent EF Core 10 migrations for MySQL, MariaDB, and PostgreSQL on .NET 10, with schema drift detection and read-only preflight/postflight checks.",
       "primary_language": "C#",
       "topics": [
+        "csharp",
+        "database-migrations",
+        "dotnet",
+        "efcore",
         "entity-framework-core",
-        "migrations",
+        "mariadb",
         "mysql",
-        "postgresql"
+        "nuget",
+        "postgresql",
+        "schema-convergence",
+        "schema-drift",
+        "schema-migrations"
       ],
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "archived": false,
       "fork": false,
-      "pushed_at": null
+      "pushed_at": "2026-09-06T00:10:38Z"
     }
   ],
   "contributions": null,
@@ -97,49 +135,45 @@
     {
       "id": "Doka.Caching.MySql",
       "version": "10.3.0",
-      "total_downloads": null,
+      "total_downloads": 783,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.Caching.MySql/"
     },
     {
       "id": "Doka.EntityFrameworkCore.MySql",
       "version": "10.3.0",
-      "total_downloads": null,
+      "total_downloads": 2067,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql/"
     },
     {
       "id": "Doka.EntityFrameworkCore.MySql.NetTopologySuite",
       "version": "10.3.0",
-      "total_downloads": null,
+      "total_downloads": 1523,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql.NetTopologySuite/"
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations",
       "version": "10.2.1",
-      "total_downloads": null,
+      "total_downloads": 778,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations/"
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations.MySql",
       "version": "10.2.1",
-      "total_downloads": null,
+      "total_downloads": 752,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.MySql/"
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations.PostgreSql",
       "version": "10.2.1",
-      "total_downloads": null,
+      "total_downloads": 730,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.PostgreSql/"
     }
   ],
-  "warnings": [
-    "Offline preview: metadata is a historical sample, not current live data.",
-    "Private project names and summaries are manually approved public content; private repository collection is disabled.",
-    "Offline preview: public signals are replaced on the first successful live workflow."
-  ]
+  "warnings": []
 }

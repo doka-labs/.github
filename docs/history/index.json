@@ -1,3 +1,11 @@
 {
-  "states": []
+  "states": [
+    {
+      "hash": "6161DABD663C8B09",
+      "generated_at": "2026-09-06T00:20:37.072828656+00:00",
+      "file": "6161dabd663c8b09.json",
+      "node_count": 15,
+      "edge_count": 25
+    }
+  ]
 }
