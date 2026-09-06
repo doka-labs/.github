@@ -53,8 +53,8 @@
   ],
   "schema": 2,
   "mode": "live",
-  "generated_at": "2026-09-06T00:24:53.778995042+00:00",
-  "semantic_hash": "563B6FE9F8A29040",
+  "generated_at": "2026-09-06T07:57:56.567316608+00:00",
+  "semantic_hash": "A04B295B3B124CCA",
   "canvas": {
     "show_activity_orbit": true,
     "show_state_hash": false,
@@ -347,7 +347,7 @@
       "summary": "Core package",
       "details": [
         "Family: migrations",
-        "Observed version: 10.2.1",
+        "Observed version: 10.3.0",
         "Downloads: 778"
       ],
       "tags": [
@@ -376,7 +376,7 @@
       "summary": "MySQL and MariaDB adapter",
       "details": [
         "Family: migrations",
-        "Observed version: 10.2.1",
+        "Observed version: 10.3.0",
         "Downloads: 752"
       ],
       "tags": [
@@ -405,7 +405,7 @@
       "summary": "PostgreSQL adapter",
       "details": [
         "Family: migrations",
-        "Observed version: 10.2.1",
+        "Observed version: 10.3.0",
         "Downloads: 730"
       ],
       "tags": [
@@ -427,8 +427,8 @@
       "surface_label": "C#",
       "kind": "technology",
       "domain": "doka-labs",
-      "x": 1052.4012,
-      "y": 505.0762,
+      "x": 739.6905,
+      "y": 468.66333,
       "radius": 22.0,
       "weight": 0.55,
       "summary": "C# capability in the language layer.",
@@ -453,8 +453,8 @@
       "surface_label": ".NET",
       "kind": "technology",
       "domain": "doka-labs",
-      "x": 972.17004,
-      "y": 363.04434,
+      "x": 756.6686,
+      "y": 401.087,
       "radius": 22.0,
       "weight": 0.55,
       "summary": ".NET capability in the runtime layer.",
@@ -479,8 +479,8 @@
       "surface_label": "JavaScript",
       "kind": "technology",
       "domain": "doka-labs",
-      "x": 1074.6571,
-      "y": 526.0785,
+      "x": 671.8646,
+      "y": 388.4475,
       "radius": 9.0,
       "weight": 0.18,
       "summary": "JavaScript capability in the language layer.",
@@ -700,21 +700,21 @@
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations",
-      "version": "10.2.1",
+      "version": "10.3.0",
       "total_downloads": 778,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations/"
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations.MySql",
-      "version": "10.2.1",
+      "version": "10.3.0",
       "total_downloads": 752,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.MySql/"
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations.PostgreSql",
-      "version": "10.2.1",
+      "version": "10.3.0",
       "total_downloads": 730,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.PostgreSql/"
