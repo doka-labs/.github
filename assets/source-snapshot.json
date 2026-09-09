@@ -64,7 +64,7 @@
       "forks": 0,
       "archived": false,
       "fork": false,
-      "pushed_at": "2026-09-07T08:24:49Z"
+      "pushed_at": "2026-09-08T08:10:52Z"
     },
     {
       "owner": "doka-labs",
@@ -95,7 +95,7 @@
         "spatial",
         "temporal-tables"
       ],
-      "stars": 2,
+      "stars": 3,
       "forks": 0,
       "archived": false,
       "fork": false,
@@ -135,42 +135,42 @@
     {
       "id": "Doka.Caching.MySql",
       "version": "10.3.0",
-      "total_downloads": 805,
+      "total_downloads": 839,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.Caching.MySql/"
     },
     {
       "id": "Doka.EntityFrameworkCore.MySql",
       "version": "10.3.0",
-      "total_downloads": 2186,
+      "total_downloads": 2209,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql/"
     },
     {
       "id": "Doka.EntityFrameworkCore.MySql.NetTopologySuite",
       "version": "10.3.0",
-      "total_downloads": 1540,
+      "total_downloads": 1560,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql.NetTopologySuite/"
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations",
       "version": "10.3.1",
-      "total_downloads": 919,
+      "total_downloads": 1199,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations/"
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations.MySql",
       "version": "10.3.1",
-      "total_downloads": 859,
+      "total_downloads": 935,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.MySql/"
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations.PostgreSql",
       "version": "10.3.1",
-      "total_downloads": 851,
+      "total_downloads": 918,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.PostgreSql/"
     }
