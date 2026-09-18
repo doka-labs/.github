@@ -53,8 +53,8 @@
   ],
   "schema": 2,
   "mode": "live",
-  "generated_at": "2026-09-17T08:43:20.507464309+00:00",
-  "semantic_hash": "B7A156C0A2897918",
+  "generated_at": "2026-09-18T08:18:46.129596700+00:00",
+  "semantic_hash": "07ACBE33301AEEA4",
   "canvas": {
     "show_activity_orbit": true,
     "show_state_hash": false,
@@ -81,7 +81,7 @@
     "organization_public_repositories": 3,
     "followers": null,
     "package_count": 6,
-    "package_downloads": 10202,
+    "package_downloads": 10353,
     "contribution_total": null,
     "private_repository_count": null
   },
@@ -233,7 +233,7 @@
       "details": [
         "Family: cache",
         "Observed version: 10.4.1",
-        "Downloads: 1148"
+        "Downloads: 1158"
       ],
       "tags": [
         "nuget",
@@ -262,7 +262,7 @@
       "details": [
         "Family: provider",
         "Observed version: 10.4.1",
-        "Downloads: 2781"
+        "Downloads: 2804"
       ],
       "tags": [
         "nuget",
@@ -291,7 +291,7 @@
       "details": [
         "Family: spatial",
         "Observed version: 10.4.1",
-        "Downloads: 1874"
+        "Downloads: 1919"
       ],
       "tags": [
         "nuget",
@@ -348,7 +348,7 @@
       "details": [
         "Family: migrations",
         "Observed version: 10.4.1",
-        "Downloads: 1696"
+        "Downloads: 1705"
       ],
       "tags": [
         "nuget",
@@ -377,7 +377,7 @@
       "details": [
         "Family: migrations",
         "Observed version: 10.4.1",
-        "Downloads: 1363"
+        "Downloads: 1398"
       ],
       "tags": [
         "nuget",
@@ -406,7 +406,7 @@
       "details": [
         "Family: migrations",
         "Observed version: 10.4.1",
-        "Downloads: 1340"
+        "Downloads: 1369"
       ],
       "tags": [
         "nuget",
@@ -427,8 +427,8 @@
       "surface_label": "C#",
       "kind": "technology",
       "domain": "doka-labs",
-      "x": 716.35846,
-      "y": 398.00586,
+      "x": 782.55664,
+      "y": 583.7086,
       "radius": 22.0,
       "weight": 0.55,
       "summary": "C# capability in the language layer.",
@@ -453,8 +453,8 @@
       "surface_label": ".NET",
       "kind": "technology",
       "domain": "doka-labs",
-      "x": 1088.614,
-      "y": 408.00262,
+      "x": 973.7929,
+      "y": 369.69037,
       "radius": 22.0,
       "weight": 0.55,
       "summary": ".NET capability in the runtime layer.",
@@ -479,8 +479,8 @@
       "surface_label": "JavaScript",
       "kind": "technology",
       "domain": "doka-labs",
-      "x": 1125.3247,
-      "y": 523.9005,
+      "x": 676.2981,
+      "y": 492.77386,
       "radius": 9.0,
       "weight": 0.18,
       "summary": "JavaScript capability in the language layer.",
@@ -680,42 +680,42 @@
     {
       "id": "Doka.Caching.MySql",
       "version": "10.4.1",
-      "total_downloads": 1148,
+      "total_downloads": 1158,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.Caching.MySql/"
     },
     {
       "id": "Doka.EntityFrameworkCore.MySql",
       "version": "10.4.1",
-      "total_downloads": 2781,
+      "total_downloads": 2804,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql/"
     },
     {
       "id": "Doka.EntityFrameworkCore.MySql.NetTopologySuite",
       "version": "10.4.1",
-      "total_downloads": 1874,
+      "total_downloads": 1919,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql.NetTopologySuite/"
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations",
       "version": "10.4.1",
-      "total_downloads": 1696,
+      "total_downloads": 1705,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations/"
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations.MySql",
       "version": "10.4.1",
-      "total_downloads": 1363,
+      "total_downloads": 1398,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.MySql/"
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations.PostgreSql",
       "version": "10.4.1",
-      "total_downloads": 1340,
+      "total_downloads": 1369,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.PostgreSql/"
     }
