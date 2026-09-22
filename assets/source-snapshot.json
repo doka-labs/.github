@@ -64,7 +64,7 @@
       "forks": 0,
       "archived": false,
       "fork": false,
-      "pushed_at": "2026-09-20T08:41:02Z"
+      "pushed_at": "2026-09-21T09:03:19Z"
     },
     {
       "owner": "doka-labs",
@@ -99,7 +99,7 @@
       "forks": 0,
       "archived": false,
       "fork": false,
-      "pushed_at": "2026-09-21T04:20:37Z"
+      "pushed_at": "2026-09-21T16:12:42Z"
     },
     {
       "owner": "doka-labs",
@@ -126,7 +126,7 @@
       "forks": 0,
       "archived": false,
       "fork": false,
-      "pushed_at": "2026-09-21T04:49:27Z"
+      "pushed_at": "2026-09-21T19:10:02Z"
     }
   ],
   "contributions": null,
@@ -135,42 +135,42 @@
     {
       "id": "Doka.Caching.MySql",
       "version": "10.4.2",
-      "total_downloads": 1233,
+      "total_downloads": 1248,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.Caching.MySql/"
     },
     {
       "id": "Doka.EntityFrameworkCore.MySql",
       "version": "10.4.2",
-      "total_downloads": 3018,
+      "total_downloads": 3087,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql/"
     },
     {
       "id": "Doka.EntityFrameworkCore.MySql.NetTopologySuite",
       "version": "10.4.2",
-      "total_downloads": 2001,
+      "total_downloads": 2015,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql.NetTopologySuite/"
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations",
       "version": "10.4.2",
-      "total_downloads": 1966,
+      "total_downloads": 2055,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations/"
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations.MySql",
       "version": "10.4.2",
-      "total_downloads": 1616,
+      "total_downloads": 1707,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.MySql/"
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations.PostgreSql",
       "version": "10.4.2",
-      "total_downloads": 1488,
+      "total_downloads": 1491,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.PostgreSql/"
     }
