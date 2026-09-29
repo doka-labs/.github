@@ -53,8 +53,8 @@
   ],
   "schema": 2,
   "mode": "live",
-  "generated_at": "2026-09-06T00:24:53.778995042+00:00",
-  "semantic_hash": "563B6FE9F8A29040",
+  "generated_at": "2026-09-29T09:55:01.740237045+00:00",
+  "semantic_hash": "651FBC3683DFFBE1",
   "canvas": {
     "show_activity_orbit": true,
     "show_state_hash": false,
@@ -81,7 +81,7 @@
     "organization_public_repositories": 3,
     "followers": null,
     "package_count": 6,
-    "package_downloads": 6633,
+    "package_downloads": 13504,
     "contribution_total": null,
     "private_repository_count": null
   },
@@ -232,8 +232,8 @@
       "summary": "Distributed caching with MySQL",
       "details": [
         "Family: cache",
-        "Observed version: 10.3.0",
-        "Downloads: 783"
+        "Observed version: 10.4.4",
+        "Downloads: 1531"
       ],
       "tags": [
         "nuget",
@@ -261,8 +261,8 @@
       "summary": "EF Core provider for MySQL and MariaDB",
       "details": [
         "Family: provider",
-        "Observed version: 10.3.0",
-        "Downloads: 2067"
+        "Observed version: 10.4.4",
+        "Downloads: 3649"
       ],
       "tags": [
         "nuget",
@@ -290,8 +290,8 @@
       "summary": "Spatial support",
       "details": [
         "Family: spatial",
-        "Observed version: 10.3.0",
-        "Downloads: 1523"
+        "Observed version: 10.4.4",
+        "Downloads: 2319"
       ],
       "tags": [
         "nuget",
@@ -347,8 +347,8 @@
       "summary": "Core package",
       "details": [
         "Family: migrations",
-        "Observed version: 10.2.1",
-        "Downloads: 778"
+        "Observed version: 10.4.4",
+        "Downloads: 2347"
       ],
       "tags": [
         "nuget",
@@ -376,8 +376,8 @@
       "summary": "MySQL and MariaDB adapter",
       "details": [
         "Family: migrations",
-        "Observed version: 10.2.1",
-        "Downloads: 752"
+        "Observed version: 10.4.4",
+        "Downloads: 1980"
       ],
       "tags": [
         "nuget",
@@ -405,8 +405,8 @@
       "summary": "PostgreSQL adapter",
       "details": [
         "Family: migrations",
-        "Observed version: 10.2.1",
-        "Downloads: 730"
+        "Observed version: 10.4.4",
+        "Downloads: 1678"
       ],
       "tags": [
         "nuget",
@@ -427,8 +427,8 @@
       "surface_label": "C#",
       "kind": "technology",
       "domain": "doka-labs",
-      "x": 1052.4012,
-      "y": 505.0762,
+      "x": 1028.3483,
+      "y": 534.8585,
       "radius": 22.0,
       "weight": 0.55,
       "summary": "C# capability in the language layer.",
@@ -453,8 +453,8 @@
       "surface_label": ".NET",
       "kind": "technology",
       "domain": "doka-labs",
-      "x": 972.17004,
-      "y": 363.04434,
+      "x": 954.0093,
+      "y": 340.84616,
       "radius": 22.0,
       "weight": 0.55,
       "summary": ".NET capability in the runtime layer.",
@@ -479,8 +479,8 @@
       "surface_label": "JavaScript",
       "kind": "technology",
       "domain": "doka-labs",
-      "x": 1074.6571,
-      "y": 526.0785,
+      "x": 654.78107,
+      "y": 414.07422,
       "radius": 9.0,
       "weight": 0.18,
       "summary": "JavaScript capability in the language layer.",
@@ -679,43 +679,43 @@
   "packages": [
     {
       "id": "Doka.Caching.MySql",
-      "version": "10.3.0",
-      "total_downloads": 783,
+      "version": "10.4.4",
+      "total_downloads": 1531,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.Caching.MySql/"
     },
     {
       "id": "Doka.EntityFrameworkCore.MySql",
-      "version": "10.3.0",
-      "total_downloads": 2067,
+      "version": "10.4.4",
+      "total_downloads": 3649,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql/"
     },
     {
       "id": "Doka.EntityFrameworkCore.MySql.NetTopologySuite",
-      "version": "10.3.0",
-      "total_downloads": 1523,
+      "version": "10.4.4",
+      "total_downloads": 2319,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql.NetTopologySuite/"
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations",
-      "version": "10.2.1",
-      "total_downloads": 778,
+      "version": "10.4.4",
+      "total_downloads": 2347,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations/"
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations.MySql",
-      "version": "10.2.1",
-      "total_downloads": 752,
+      "version": "10.4.4",
+      "total_downloads": 1980,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.MySql/"
     },
     {
       "id": "Doka.EntityFrameworkCore.SafeMigrations.PostgreSql",
-      "version": "10.2.1",
-      "total_downloads": 730,
+      "version": "10.4.4",
+      "total_downloads": 1678,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.PostgreSql/"
     }
