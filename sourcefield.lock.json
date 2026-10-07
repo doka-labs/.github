@@ -1,0 +1,33 @@
+{
+  "assets": {
+    "aarch64-apple-darwin": {
+      "name": "sourcefield-aarch64-apple-darwin.zip",
+      "sha256": "756eee34ca736443469a39fa09ae4efbac085bffbd558776edb9f7b099d5cd08"
+    },
+    "aarch64-unknown-linux-gnu": {
+      "name": "sourcefield-aarch64-unknown-linux-gnu.zip",
+      "sha256": "0f3a5569dea5001d3572ea2c78291e3835468c77bd52f443868fb138900f037e"
+    },
+    "browser": {
+      "name": "sourcefield-browser.zip",
+      "sha256": "416d14ee0ce78c3215d66b237623d9848920ddaa7d727b67dd6cbf72ed2a406f"
+    },
+    "x86_64-apple-darwin": {
+      "name": "sourcefield-x86_64-apple-darwin.zip",
+      "sha256": "aebc83924cf1cb241de32f4422053a4f651d637207b7dc1dd1291073b6729002"
+    },
+    "x86_64-pc-windows-msvc": {
+      "name": "sourcefield-x86_64-pc-windows-msvc.zip",
+      "sha256": "c54e28ef03d90c3abef82dca593a37e4b7f7f2f7341c12b1f704721c9fccce7c"
+    },
+    "x86_64-unknown-linux-gnu": {
+      "name": "sourcefield-x86_64-unknown-linux-gnu.zip",
+      "sha256": "51386dc21ff539b1f17656aa46c30a49efddedc455a61b22f0c8f616f6109296"
+    }
+  },
+  "release": "v0.1.0",
+  "repository": "kdominic89/sourcefield",
+  "schema_version": 1,
+  "source_commit": "9c69b59c0d85eb26418fb7c7800be2b54ac55a8b",
+  "workflow": ".github/workflows/release.yml"
+}

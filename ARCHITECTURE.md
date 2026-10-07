@@ -1,55 +1,62 @@
 # Architecture
 
-SOURCEFIELD is a five-crate Rust workspace. The generator owns public state and SVG output;
-the browser consumes that output and a Rust/WASM simulation, with a JavaScript fallback.
+This repository is the configuration and public output consumer for the doka-labs organization
+profile. Sourcefield owns generation and the browser runtime in
+[kdominic89/sourcefield](https://github.com/kdominic89/sourcefield). The consumer selects immutable
+release `v0.1.0`, source commit `9c69b59c0d85eb26418fb7c7800be2b54ac55a8b`.
 
-| Crate | Responsibility |
+## Ownership
+
+| Surface | Owner and purpose |
 | --- | --- |
-| sourcefield-core | Configuration, validation, deterministic graph/state and explicit source provenance |
-| sourcefield-collector | Public organization GitHub/NuGet collection |
-| sourcefield-render | Data-driven dark, light and static SVG presentation |
-| sourcefield-cli | Collection/generation commands, output validation, no-op writes and history |
-| sourcefield-wasm | Browser simulation with declared canvas dimensions and validated input |
+| `config/organization.toml` | Canonical public doka-labs facts: projects, technologies, publications, packages, icons, and maintainer attribution |
+| `config/profile.toml` | Organization presentation, local manifest import, collection policy, placement, radii, and weights |
+| `sourcefield.lock.json` | Matched immutable native CLI and browser release identities and archive digests |
+| `.github/workflows/` | Consumer validation, refresh schedule, repository publication, and Pages deployment |
+| `assets/` and generated `docs/` text | Captured inputs, ownership inventory, current state, rendered output, and retained history |
+| `README.md` and `profile/README.md` | Authored context with explicitly managed project and package sections |
+| `tests/` | Consumer configuration, publication, and presentation contracts |
 
-## Public model
+The local import in `config/profile.toml` composes `config/organization.toml`. Organization facts
+are edited once in that manifest; the profile keeps its own layout. The maintainer is
+[kdominic89](https://github.com/kdominic89), Administrator & Core Maintainer. Approved private-project
+summaries remain public editorial content, without private repository URLs or implementation details.
 
-`config/profile.toml` is the curated content source. It separates project ownership, repository
-visibility, technology roles and package publications.
-The public presentation uses full project/package identities plus optional visual prefixes and
-short labels. Its organization domain groups ownership; they do not claim implementation dependencies.
-Private components are not inferred or read from other repositories during generation.
+Package discovery is scoped to doka-labs and the configured NuGet families. The three publication
+columns retain full package identities in links and use presentation labels where configured.
+Versions and package counts come from collection; they are not authored constants. SafeMigrations
+uses the built-in `database-safe` icon selected by the canonical manifest.
 
-The approved composition contains three projects and six NuGet publications, with US English copy.
-Layout and presentation are generated from configuration/state instead of a table of project IDs
-inside rendering code. Node coordinates and canvas dimensions are shared by SVG and simulation.
-The default field is 1800 by 1320 logical units; responsive browser content has a semantic path
-for narrow viewports instead of forcing long graph labels into a small canvas.
+## Generation and publication
 
-## Determinism and freshness
+The update workflow calls the full-SHA reusable `generate.yml`; its SHA must equal the root lock.
+Generation uses the matching CLI/runtime pair and returns a validated complete candidate with both
+selected READMEs. It has read-only repository permissions and does not publish.
 
-Semantic state normalizes unordered metadata. Fetch timestamps do not themselves constitute a
-profile change. Source status remains explicit: missing data is not zero, partial totals are not
-complete totals, and fallback versions are not current registry evidence. Rendering can still
-change when the renderer changes, even when the collected semantic state is unchanged.
+Push and pull request validation check out the same pinned shared tooling, verify the lock and caller
+pin, bootstrap the matched release pair, run consumer checks, and generate/validate an isolated offline
+candidate with read-only permissions. The manual and daily refresh use strict live collection.
+Publication is serialized: upload the candidate's complete Pages artifact first, then apply owned
+files and the selected README sections against the expected source HEAD. Repository publication must
+succeed before the dependent Pages deployment. An obsolete source revision or failed push stops deployment.
 
-History preserves the timestamp of a stored snapshot. Invalid history is rejected rather than
-silently reset. The pipeline validates history paths and retains unrelated files; only known
-obsolete snapshots are candidates for pruning. Generation is separate from committing or deploying.
+The browser runtime, including `docs/pkg/` and `docs/runtime-manifest.json`, is supplied by the
+release and included in the complete Pages artifact. Runtime files, local caches, and `dist/` remain
+ignored by Git. This repository contains no copied Rust workspace or runtime build pipeline.
 
-## Browser and delivery
+## State and recovery
 
-The default Field view uses the approved SVG composition with fixed labels, circles and radial
-connections. Independent ring and signal animations provide motion; Systems
-and Capabilities expose the graph through the simulation. Package links and a semantic node list
-remain keyboard accessible. Pause and system reduced-motion settings govern all animation paths.
-Runtime status distinguishes real WASM from the JavaScript fallback. SVG signal delays use data
-attributes and local styles; the page restores numeric timing after sanitization and animation
-recreation, without admitting inline style declarations.
+Captured observations retain source status and timestamps. Default offline generation uses the
+explicitly Preview seed in `config/offline-snapshot.json`, which contains no invented observations.
+Use `--offline --locked` for replay of recorded resolved inputs and observations with their matching
+generator identity. Preview and fallback data must not be relabeled as live. Required inputs and
+imports must exist; generation does not invent missing historical facts.
 
-README SVGs are images: links inside them are not interactive in that context. The README links to
-Pages and includes accessible text/package links outside the image. Pages uses local modules and
-CSP; it does not require a third-party CDN. See [Primary sources](SOURCES.md).
+Migration converts retained legacy state and archives to schema 3 while preserving their facts
+and timestamps. A complete original recovery copy is kept outside the repository. The configured
+`history_limit = 24` is rolling retention, not a promise of all-time history. Recover a complete
+matching data/runtime set; see [Maintenance](MAINTAINING.md).
 
-The Python preview entry point calls the canonical Rust generator. It does not maintain a second
-semantic hash or independent SVG template. WASM glue is generated at build time and remains ignored;
-the handwritten fallback has its own stable source file.
+README SVGs are image surfaces. Accessible project/package links and the Pages link remain outside
+them. Pages provides the interactive field, semantic navigation, pause, and reduced-motion behavior
+from the pinned runtime. See [Sources](SOURCES.md) for the upstream contracts.

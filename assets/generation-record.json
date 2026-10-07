@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "generator_version": "0.1.0",
+  "source_revision": "9c69b59c0d85eb26418fb7c7800be2b54ac55a8b",
+  "generator_fingerprint": "b9f54acf14f00ad974905406de4fe578f991d8ab899bc2bcc9933bfe1e91c9da",
+  "authored_config_sha256": "ba2ae3e58bdb93a1a3f9c3883d4c2cf1d7008c70a5087826d31609bdd178a2c6",
+  "inputs": {
+    "import-capture.json": "0740e3dc89fd3583c760ca7d1545ece039b05ac95ace3884762fe8abbd0370e2",
+    "layout.json": "34a329ca11b5fa52b099a57e1a15c04b304ef4d9a8871ddf584f9a25fd4e2bcf",
+    "profile-state.json": "47c5cf73482ad64ed5643db20e6ea0e435074f80d62659e5a39834a2a52a07aa",
+    "resolved-config.json": "168e6ee3ec6ab2bb9eac8535db63dd5fc2e5ab73a864806c686b586ef61b1752",
+    "source-snapshot.json": "44602e142af9ec8411adfe87f47635cca4e6375245fd458a86a8ca6a51c4ee59"
+  }
+}

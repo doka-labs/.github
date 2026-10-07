@@ -7,8 +7,8 @@
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self'; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="theme-color" content="#050812">
-  <meta name="description" content="doka-labs: libraries and tools for .NET and relational databases.">
-  <title>SOURCEFIELD / doka-labs</title>
+  <meta name="description" content="An interactive field of projects, packages, and capabilities.">
+  <title>SOURCEFIELD</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="./site.webmanifest">
   <link rel="stylesheet" href="./app.css">
@@ -16,11 +16,11 @@
 <body>
   <main class="shell" aria-label="Interactive SOURCEFIELD profile">
     <header class="topbar">
-      <a class="identity" href="https://github.com/doka-labs" rel="noreferrer">
+      <a class="identity" href="#" rel="noreferrer">
         <span class="identity-mark" aria-hidden="true"></span>
         <span>
           <b>SOURCEFIELD</b>
-          <small>/ doka-labs</small>
+          <small>/ PROFILE</small>
         </span>
       </a>
 
@@ -34,6 +34,9 @@
         <label class="history-label">History
           <select id="history-select" aria-label="Historical graph state"><option value="">Current</option></select>
         </label>
+        <button id="domain-button" class="quiet-button" type="button" aria-label="Change namespace filter">
+          <span class="status-dot"></span><span id="domain-label">All namespaces</span>
+        </button>
         <button id="motion-button" class="icon-button" type="button" aria-label="Pause motion" title="Pause motion">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6v12M16 6v12"/></svg>
         </button>
@@ -81,16 +84,13 @@
       <details>
         <summary>Projects and capabilities</summary>
         <ul id="node-list"></ul>
+        <div id="profile-context"></div>
       </details>
     </section>
 
     <footer class="footer mono">
       <div class="metrics" id="metrics"></div>
-      <div class="footer-links">
-        <a id="maintainer-link" href="https://github.com/kdominic89" rel="noreferrer">kdominic89 / Administrator &amp; Core Maintainer</a>
-        <a href="https://github.com/doka-labs" rel="noreferrer">DOKA LABS</a>
-        <a href="https://github.com/doka-labs/.github" rel="noreferrer">SOURCE</a>
-      </div>
+      <div class="footer-links"></div>
     </footer>
   </main>
 

@@ -1,99 +1,102 @@
 # Setup
 
-SOURCEFIELD generates this profile with Rust and serves an interactive version through GitHub Pages.
-The checked-in snapshot is a labeled offline preview. Public metadata is collected by the update workflow.
+This is the public `doka-labs/.github` organization profile repository. GitHub displays
+`profile/README.md` on the organization overview; the root README also receives the managed
+project and package sections. The interactive site is
+[https://doka-labs.github.io/.github/](https://doka-labs.github.io/.github/).
 
-## Local development
+## Repository automation
 
-Install Rust through rustup, Python 3.11 or newer, Node.js with the built-in test runner, and a
-native linker/toolchain. `rust-toolchain.toml` pins Rust 1.98.0, rustfmt, Clippy and the
-`wasm32-unknown-unknown` target. `Cargo.lock` pins the existing dependency graph.
+Select **Settings > Pages > Build and deployment > GitHub Actions** and review the `github-pages`
+environment and deployment branch policy. Confirm that organization policy permits the configured
+Actions and repository publication permissions. In **Settings > Actions > General**, retain the
+existing selected-actions policy, including this exact reusable workflow entry:
 
-```sh
-rustup show active-toolchain
-cargo install wasm-pack --version 0.15.0 --locked
-./scripts/generate-preview.sh
-./scripts/build-wasm.sh
-./scripts/verify.sh
-python3 scripts/validate_artifact.py --require-wasm
-./scripts/serve.sh
+```text
+kdominic89/sourcefield/.github/workflows/generate.yml@9c69b59c0d85eb26418fb7c7800be2b54ac55a8b
 ```
 
-Open the loopback URL printed by the server. Use HTTP for module/WASM loading rather than opening
-`docs/index.html` as a file. The checked-in SVG and JSON provide an offline preview; the browser
-reports when it uses the JavaScript simulation fallback instead of compiled WASM.
+The repository allowlist was verified on October 7, 2026 to include this entry. The rule authorizes
+only this workflow at this commit; it does not change other repositories or allow every external
+action. See
+[GitHub's documented workflow allowlist syntax](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#allowing-select-actions-and-reusable-workflows-to-run).
 
-To collect public metadata locally:
+The update workflow supports manual dispatch and the daily cron `17 3 * * *` (03:17 UTC).
+It calls Sourcefield's read-only reusable generator at
+`9c69b59c0d85eb26418fb7c7800be2b54ac55a8b`, matching `sourcefield.lock.json`. Strict live collection
+must succeed before publication. The caller uploads the complete candidate Pages artifact, checks
+the expected repository HEAD, publishes only owned output and selected READMEs, and then deploys.
+A push or pull request runs a read-only validation job using shared tooling from the same source SHA:
+lock/pin checks, authenticated release installation, consumer tests, offline candidate generation,
+and complete artifact validation.
 
-```sh
-cargo run --locked -p sourcefield-cli -- generate --strict-live
-```
+Use **Actions > Update SOURCEFIELD > Run workflow** for an intentional refresh. Check the completed
+repository publication and Pages deployment, then verify the served page. Configured automation or
+a locally generated candidate does not prove a public deployment succeeded. If deployment fails
+after repository publication, retry deployment of that same saved artifact.
 
-Provide `GH_TOKEN` through your environment if authenticated GitHub collection is needed.
-Do not put a token in a command argument, configuration file, or repository. Collection reads
-public organization and package metadata only; see [Privacy](PRIVACY.md).
+## Optional local preview
 
-## GitHub Pages
+Local preview uses Python 3.11+ and shared tooling from a Sourcefield checkout at exactly
+`9c69b59c0d85eb26418fb7c7800be2b54ac55a8b`. Confirm that checkout with `git rev-parse HEAD` before
+using its scripts. A shared installation must contain the verified native CLI and matching browser
+runtime selected by this consumer's lock. Reuse that installation across consumers; no per-repository
+manual installation or Rust build is needed.
 
-Publish this project as the public `doka-labs/.github` repository. GitHub displays
-`profile/README.md` on the organization overview. The root README remains useful in the repository.
-Both include a direct maintainer link because SVG image links are not interactive on GitHub.
-
-Before the first deployment, select **Settings > Pages > Build and deployment > GitHub Actions**.
-Check that organization policy permits Pages and workflow writes to this repository, then review
-the `github-pages` environment and its deployment branch rules. Enable Actions if required.
-Run **Actions > Update SOURCEFIELD > Run workflow** on `main` for the first publication.
-A push runs validation; it does not itself trigger the daily/manual publishing workflow.
-The interactive site is `https://doka-labs.github.io/.github/`. Until the first deployment succeeds,
-that URL returns 404. Verify the completed deployment and the public page before announcing it.
-
-The update workflow collects strict live public metadata, regenerates public text artifacts,
-builds WASM and deploys `docs/`. It commits changed state only when generated bytes differ.
-Compiled WASM/glue are deployed, not committed. No personal token, private repository count,
-or account contribution query is needed. The built-in workflow token supplies public GitHub access.
-
-GitHub documents [organization profile placement](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/customizing-your-organizations-profile)
-and [Pages workflow setup](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
-
-A failure in strict collection stops the update; it must not publish a fallback as live data.
-The local offline preview remains available independently of those APIs.
-
-## Real-browser verification
-
-The portable entry point is `node scripts/verify-browser.mjs` (or `make verify-browser`). It requires
-an existing Playwright library and its matching Chromium installation, plus the generated site and
-compiled WASM. It installs nothing and keeps the Chromium sandbox enabled.
+If this machine has no matching installation, bootstrap once into a new directory using the pinned
+checkout and GitHub CLI with release and attestation verification support. This initial step needs
+network access and suitable read authentication:
 
 ```sh
-./scripts/generate-preview.sh
-./scripts/build-wasm.sh
-node scripts/verify-browser.mjs
+SOURCEFIELD_SOURCE=/path/to/pinned/sourcefield
+export SOURCEFIELD_INSTALLATION=/path/to/shared/sourcefield-v0.1.0
+CONSUMER_REPOSITORY=/path/to/doka-labs
+
+python3 -B "$SOURCEFIELD_SOURCE/scripts/bootstrap_release.py" \
+  --lock "$CONSUMER_REPOSITORY/sourcefield.lock.json" \
+  --destination "$SOURCEFIELD_INSTALLATION"
 ```
 
-If Playwright is supplied by a separate tooling environment, pass its module entry file. A browser
-executable override is optional; otherwise Playwright uses its installed Chromium:
+Keep existing installations intact. The bootstrap verifies the immutable release, archive digests,
+and attestations before publishing a matched CLI/runtime pair. See the pinned upstream
+[installation contract](https://github.com/kdominic89/sourcefield/blob/9c69b59c0d85eb26418fb7c7800be2b54ac55a8b/docs/distribution.md#verified-installation).
+
+Check the consumer pin, then generate into a new external directory:
 
 ```sh
-node scripts/verify-browser.mjs \
-  --playwright-module /path/to/tooling/node_modules/playwright/index.mjs \
-  --browser /path/to/chromium \
-  --output ./dist/browser-checks
+python3 -B "$SOURCEFIELD_SOURCE/scripts/check_pin.py" \
+  --lock "$CONSUMER_REPOSITORY/sourcefield.lock.json" \
+  --workflow "$CONSUMER_REPOSITORY/.github/workflows/update-profile.yml"
+
+python3 -B "$SOURCEFIELD_SOURCE/scripts/consumer_candidate.py" \
+  --source "$CONSUMER_REPOSITORY" \
+  --destination /path/to/new-external-preview \
+  --installation "$SOURCEFIELD_INSTALLATION" \
+  --readmes '["README.md", "profile/README.md"]' \
+  --offline
+
+python3 -B -m http.server 8000 \
+  --bind 127.0.0.1 --directory /path/to/new-external-preview/docs
 ```
 
-`SOURCEFIELD_PLAYWRIGHT_MODULE` and `SOURCEFIELD_CHROMIUM` provide the same runtime overrides for
-`make verify-browser`. Paths are examples, not repository defaults. Use a Node version supported by
-your installed Playwright release. The verified tooling versions are recorded in
-[Validation](VALIDATION-REPORT.md); installation and browser compatibility are documented by
-[Playwright](https://playwright.dev/docs/library).
+Open `http://127.0.0.1:8000/` for module and WASM loading. The candidate tool reads tracked consumer
+inputs; it omits untracked new files. Use the reviewed committed input set for this path, and handle
+pre-commit review separately. The destination must not already exist. Default `--offline` uses the
+empty, explicitly Preview seed in `config/offline-snapshot.json`; it does not reproduce current
+collected metrics. That tracked seed is required by the released CLI, including strict refresh.
+Missing required inputs fail explicitly. Use `--offline --locked` to replay retained captured
+observations and resolved inputs with their matching generator identity. Neither mode is a live refresh.
 
-The runner serves only `docs/` on an ephemeral loopback port, closes the browser and server on success
-or failure, and writes `results.json` and screenshots beneath `dist/browser-checks/` by default.
-Evidence is ignored by Git. A failed check exits nonzero; a missing runtime or WASM build produces an
-explicit error. The suite covers real WASM and fallback behavior, keyboard/touch interaction, history,
-mobile layout, radial connections and animation lifecycle transitions. It uses the current approved
-profile inventory as a regression fixture, so deliberate inventory/layout changes may require updating
-those assertions as part of their review.
+## Consumer checks
 
-`./scripts/verify.sh` remains the native/unit check entry point. Its Node tests use a lightweight host;
-they do not replace the real-browser command. The CI workflows run these checks and post-generation
-geometry tests; real Chromium verification is currently an explicit local/pre-publication step.
+From the consumer repository, run:
+
+```sh
+python3 -B -m unittest discover -s tests -p 'test_*.py'
+```
+
+Installed-runtime integration probes require `SOURCEFIELD_INSTALLATION` to identify the matching
+shared installation. Check the output for skipped probes when that installation is unavailable.
+Inspect dark, light, and static SVGs, both READMEs, current and retained historical browser views,
+mobile layout, keyboard navigation, pause, and reduced motion before publication. The generator's
+Rust and browser implementation tests belong upstream.

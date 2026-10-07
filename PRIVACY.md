@@ -1,22 +1,27 @@
 # Privacy
 
-The organization profile publishes curated project descriptions, technology labels and six NuGet
-packages. RelationalLab is private; its owner-approved name and short stack description are public
-by design. No repository URL or implementation details are emitted for that private project.
-The `private-abstract` label means curated public description, not anonymization.
+The organization profile publishes curated project descriptions, technology labels, maintainer
+attribution, and NuGet package information. RelationalLab is private; its approved name and abstract
+summary are intentionally public. The `private-abstract` label does not anonymize that content.
+Its private repository URL and implementation details are not publication inputs.
 
-Collection reads public organization metadata, public repository metadata and NuGet package metadata.
-It does not enumerate the maintainer's repositories, query personal contributions, or count private
-repositories. The maintainer link is editorial attribution, not a collection source. Personal projects,
-hardware, learning memberships and other personal profile content are absent from the configuration.
+Canonical public content lives in `config/organization.toml`. Collection policy in
+`config/profile.toml` selects doka-labs public organization/repository metadata and the configured
+NuGet owner and families. It does not collect personal contributions or private repository counts.
+The maintainer link identifies kdominic89 as Administrator & Core Maintainer; it is editorial
+attribution, not permission to collect the maintainer's other repositories.
 
-Use `GH_TOKEN` or `GITHUB_TOKEN` only through the environment. Never store credentials in configuration,
-fixtures, output or history. Errors are bounded and redacted before publication.
+Supply any collection credentials through the environment or an explicitly selected workflow secret.
+Never place tokens in configuration, captures, fixtures, output, or history. The normal workflow uses
+the built-in token for public GitHub collection and does not inherit all caller secrets. Upstream
+validation, scoped source status, and redacted diagnostics support this boundary; editorial review
+is still necessary because structural validation cannot prove arbitrary prose contains no secret.
 
-Everything in assets and deployed docs is public. History preserves previously published content;
-removal from current configuration does not erase old history or Git commits. Review all publication
-surfaces if information needs to be withdrawn. No external fonts or analytics are embedded.
-External links contact GitHub or NuGet only when followed.
+Published assets, both managed READMEs, the complete Pages artifact, and retained history are public.
+Removing content from current configuration does not erase earlier history or Git commits. Rolling
+retention is limited by `history_limit = 24`; separate migration recovery copies require their own
+access control. Review all affected publication and recovery surfaces when withdrawing information.
 
-Validation checks structure and common unsafe content. It cannot establish editorial approval or
-prove that arbitrary prose contains no secret. Review public content before publishing.
+The pinned browser runtime uses local resources without embedded analytics or external fonts.
+Following an external project or package link contacts its destination service. For upstream privacy
+or collection defects, use the reporting path in [Security](SECURITY.md).

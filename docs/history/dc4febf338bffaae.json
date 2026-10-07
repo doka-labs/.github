@@ -1,22 +1,698 @@
 {
+  "activity": [],
+  "canvas": {
+    "height": 1320,
+    "motion_seconds": 32,
+    "show_activity_orbit": true,
+    "show_details": false,
+    "show_interests_in_readme": false,
+    "show_state_hash": false,
+    "show_technology_labels": true,
+    "width": 1800
+  },
+  "edges": [
+    {
+      "from": "domain:doka-labs",
+      "kind": "contains",
+      "show_in_readme": true,
+      "to": "project:mysql",
+      "weight": 0.8
+    },
+    {
+      "from": "technology:csharp",
+      "kind": "implemented-with",
+      "show_in_readme": true,
+      "to": "project:mysql",
+      "weight": 0.75
+    },
+    {
+      "from": "technology:dotnet",
+      "kind": "implemented-with",
+      "show_in_readme": true,
+      "to": "project:mysql",
+      "weight": 0.75
+    },
+    {
+      "from": "domain:doka-labs",
+      "kind": "contains",
+      "show_in_readme": true,
+      "to": "project:relational-lab",
+      "weight": 0.8
+    },
+    {
+      "from": "technology:csharp",
+      "kind": "implemented-with",
+      "show_in_readme": true,
+      "to": "project:relational-lab",
+      "weight": 0.75
+    },
+    {
+      "from": "technology:dotnet",
+      "kind": "implemented-with",
+      "show_in_readme": true,
+      "to": "project:relational-lab",
+      "weight": 0.75
+    },
+    {
+      "from": "technology:javascript",
+      "kind": "implemented-with",
+      "show_in_readme": true,
+      "to": "project:relational-lab",
+      "weight": 0.75
+    },
+    {
+      "from": "domain:doka-labs",
+      "kind": "contains",
+      "show_in_readme": true,
+      "to": "project:safe-migrations",
+      "weight": 0.8
+    },
+    {
+      "from": "technology:csharp",
+      "kind": "implemented-with",
+      "show_in_readme": true,
+      "to": "project:safe-migrations",
+      "weight": 0.75
+    },
+    {
+      "from": "technology:dotnet",
+      "kind": "implemented-with",
+      "show_in_readme": true,
+      "to": "project:safe-migrations",
+      "weight": 0.75
+    },
+    {
+      "from": "domain:doka-labs",
+      "kind": "contains",
+      "show_in_readme": true,
+      "to": "publication:mysql",
+      "weight": 1.0
+    },
+    {
+      "from": "publication:mysql",
+      "kind": "publishes",
+      "show_in_readme": true,
+      "to": "package:Doka.Caching.MySql",
+      "weight": 0.5
+    },
+    {
+      "from": "publication:mysql",
+      "kind": "publishes",
+      "show_in_readme": true,
+      "to": "package:Doka.EntityFrameworkCore.MySql",
+      "weight": 0.5
+    },
+    {
+      "from": "publication:mysql",
+      "kind": "publishes",
+      "show_in_readme": true,
+      "to": "package:Doka.EntityFrameworkCore.MySql.NetTopologySuite",
+      "weight": 0.5
+    },
+    {
+      "from": "technology:csharp",
+      "kind": "implemented-with",
+      "show_in_readme": true,
+      "to": "publication:mysql",
+      "weight": 0.7
+    },
+    {
+      "from": "technology:dotnet",
+      "kind": "implemented-with",
+      "show_in_readme": true,
+      "to": "publication:mysql",
+      "weight": 0.7
+    },
+    {
+      "from": "domain:doka-labs",
+      "kind": "contains",
+      "show_in_readme": true,
+      "to": "publication:safe-migrations",
+      "weight": 1.0
+    },
+    {
+      "from": "publication:safe-migrations",
+      "kind": "publishes",
+      "show_in_readme": true,
+      "to": "package:Doka.EntityFrameworkCore.SafeMigrations",
+      "weight": 0.5
+    },
+    {
+      "from": "publication:safe-migrations",
+      "kind": "publishes",
+      "show_in_readme": true,
+      "to": "package:Doka.EntityFrameworkCore.SafeMigrations.MySql",
+      "weight": 0.5
+    },
+    {
+      "from": "publication:safe-migrations",
+      "kind": "publishes",
+      "show_in_readme": true,
+      "to": "package:Doka.EntityFrameworkCore.SafeMigrations.PostgreSql",
+      "weight": 0.5
+    },
+    {
+      "from": "technology:csharp",
+      "kind": "implemented-with",
+      "show_in_readme": true,
+      "to": "publication:safe-migrations",
+      "weight": 0.7
+    },
+    {
+      "from": "technology:dotnet",
+      "kind": "implemented-with",
+      "show_in_readme": true,
+      "to": "publication:safe-migrations",
+      "weight": 0.7
+    },
+    {
+      "from": "domain:doka-labs",
+      "kind": "affinity",
+      "show_in_readme": true,
+      "to": "technology:csharp",
+      "weight": 0.35
+    },
+    {
+      "from": "domain:doka-labs",
+      "kind": "affinity",
+      "show_in_readme": true,
+      "to": "technology:dotnet",
+      "weight": 0.35
+    },
+    {
+      "from": "domain:doka-labs",
+      "kind": "affinity",
+      "show_in_readme": false,
+      "to": "technology:javascript",
+      "weight": 0.12
+    }
+  ],
+  "generated_at": "2026-09-26T08:39:56.377301272+00:00",
+  "interests": [],
+  "learning": [],
+  "mode": "live",
+  "nodes": [
+    {
+      "details": [],
+      "display_stack": [],
+      "domain": "doka-labs",
+      "family": null,
+      "id": "domain:doka-labs",
+      "kind": "domain",
+      "label": "doka-labs",
+      "label_prefix": null,
+      "radius": 61.0,
+      "scope": "organization",
+      "show_in_readme": true,
+      "summary": "2 public / 1 private",
+      "surface_label": "doka-labs",
+      "tags": [
+        "organization",
+        "doka-labs"
+      ],
+      "url": "https://github.com/doka-labs",
+      "visibility": null,
+      "visual": "field",
+      "weight": 1.0,
+      "x": 900.0,
+      "y": 465.0
+    },
+    {
+      "details": [],
+      "display_stack": [
+        "C#",
+        ".NET",
+        "EF Core"
+      ],
+      "domain": "doka-labs",
+      "family": null,
+      "id": "project:mysql",
+      "kind": "project",
+      "label": "Doka.EntityFrameworkCore.MySql",
+      "label_prefix": "Doka.EntityFrameworkCore.",
+      "radius": 48.0,
+      "scope": "active",
+      "show_in_readme": true,
+      "summary": "Provider, spatial support & caching",
+      "surface_label": "MySql",
+      "tags": [],
+      "url": "https://github.com/doka-labs/Doka.EntityFrameworkCore.MySql",
+      "visibility": "public",
+      "visual": "provider",
+      "weight": 0.8,
+      "x": 470.0,
+      "y": 360.0
+    },
+    {
+      "details": [],
+      "display_stack": [
+        "C#",
+        ".NET",
+        "JavaScript"
+      ],
+      "domain": "doka-labs",
+      "family": null,
+      "id": "project:relational-lab",
+      "kind": "project",
+      "label": "RelationalLab",
+      "label_prefix": null,
+      "radius": 42.0,
+      "scope": "active",
+      "show_in_readme": true,
+      "summary": "A test lab for relational databases",
+      "surface_label": "RelationalLab",
+      "tags": [],
+      "url": null,
+      "visibility": "private-abstract",
+      "visual": "lab",
+      "weight": 0.8,
+      "x": 900.0,
+      "y": 705.0
+    },
+    {
+      "details": [],
+      "display_stack": [
+        "C#",
+        ".NET",
+        "EF Core"
+      ],
+      "domain": "doka-labs",
+      "family": null,
+      "id": "project:safe-migrations",
+      "kind": "project",
+      "label": "Doka.EntityFrameworkCore.SafeMigrations",
+      "label_prefix": "Doka.EntityFrameworkCore.",
+      "radius": 51.0,
+      "scope": "active",
+      "show_in_readme": true,
+      "summary": "MySQL / MariaDB / PostgreSQL",
+      "surface_label": "SafeMigrations",
+      "tags": [],
+      "url": "https://github.com/doka-labs/Doka.EntityFrameworkCore.SafeMigrations",
+      "visibility": "public",
+      "visual": "migrations",
+      "weight": 0.8,
+      "x": 1330.0,
+      "y": 360.0
+    },
+    {
+      "details": [
+        "Doka.Caching.MySql",
+        "Doka.EntityFrameworkCore.MySql",
+        "Doka.EntityFrameworkCore.MySql.NetTopologySuite"
+      ],
+      "display_stack": [],
+      "domain": "doka-labs",
+      "family": null,
+      "id": "publication:mysql",
+      "kind": "publication",
+      "label": "Doka.EntityFrameworkCore.MySql",
+      "label_prefix": null,
+      "radius": 76.0,
+      "scope": "nuget",
+      "show_in_readme": true,
+      "summary": "Published NuGet packages.",
+      "surface_label": "Doka.EntityFrameworkCore.MySql",
+      "tags": [
+        "nuget"
+      ],
+      "url": "https://github.com/doka-labs",
+      "visibility": "public",
+      "visual": "package-field",
+      "weight": 1.0,
+      "x": 76.0,
+      "y": 962.0
+    },
+    {
+      "details": [
+        "Family: cache",
+        "Observed version: 10.4.4",
+        "Downloads: 1477"
+      ],
+      "display_stack": [],
+      "domain": "doka-labs",
+      "family": "cache",
+      "id": "package:Doka.Caching.MySql",
+      "kind": "package",
+      "label": "Doka.Caching.MySql",
+      "label_prefix": null,
+      "radius": 15.0,
+      "scope": "nuget",
+      "show_in_readme": true,
+      "summary": "Distributed caching with MySQL",
+      "surface_label": "CACHE",
+      "tags": [
+        "nuget",
+        "cache"
+      ],
+      "url": "https://www.nuget.org/packages/Doka.Caching.MySql/",
+      "visibility": "public",
+      "visual": "package",
+      "weight": 0.45,
+      "x": 85.0,
+      "y": 1172.0
+    },
+    {
+      "details": [
+        "Family: provider",
+        "Observed version: 10.4.4",
+        "Downloads: 3472"
+      ],
+      "display_stack": [],
+      "domain": "doka-labs",
+      "family": "provider",
+      "id": "package:Doka.EntityFrameworkCore.MySql",
+      "kind": "package",
+      "label": "Doka.EntityFrameworkCore.MySql",
+      "label_prefix": null,
+      "radius": 15.0,
+      "scope": "nuget",
+      "show_in_readme": true,
+      "summary": "EF Core provider for MySQL and MariaDB",
+      "surface_label": "PROVIDER",
+      "tags": [
+        "nuget",
+        "provider"
+      ],
+      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql/",
+      "visibility": "public",
+      "visual": "package",
+      "weight": 0.45,
+      "x": 85.0,
+      "y": 1012.0
+    },
+    {
+      "details": [
+        "Family: spatial",
+        "Observed version: 10.4.4",
+        "Downloads: 2275"
+      ],
+      "display_stack": [],
+      "domain": "doka-labs",
+      "family": "spatial",
+      "id": "package:Doka.EntityFrameworkCore.MySql.NetTopologySuite",
+      "kind": "package",
+      "label": "Doka.EntityFrameworkCore.MySql.NetTopologySuite",
+      "label_prefix": null,
+      "radius": 15.0,
+      "scope": "nuget",
+      "show_in_readme": true,
+      "summary": "Spatial support",
+      "surface_label": "SPATIAL",
+      "tags": [
+        "nuget",
+        "spatial"
+      ],
+      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql.NetTopologySuite/",
+      "visibility": "public",
+      "visual": "package",
+      "weight": 0.45,
+      "x": 85.0,
+      "y": 1092.0
+    },
+    {
+      "details": [
+        "Doka.EntityFrameworkCore.SafeMigrations",
+        "Doka.EntityFrameworkCore.SafeMigrations.MySql",
+        "Doka.EntityFrameworkCore.SafeMigrations.PostgreSql"
+      ],
+      "display_stack": [],
+      "domain": "doka-labs",
+      "family": null,
+      "id": "publication:safe-migrations",
+      "kind": "publication",
+      "label": "Doka.EntityFrameworkCore.SafeMigrations",
+      "label_prefix": null,
+      "radius": 76.0,
+      "scope": "nuget",
+      "show_in_readme": true,
+      "summary": "Published NuGet packages.",
+      "surface_label": "Doka.EntityFrameworkCore.SafeMigrations",
+      "tags": [
+        "nuget"
+      ],
+      "url": "https://github.com/doka-labs",
+      "visibility": "public",
+      "visual": "package-field",
+      "weight": 1.0,
+      "x": 920.0,
+      "y": 962.0
+    },
+    {
+      "details": [
+        "Family: migrations",
+        "Observed version: 10.4.3",
+        "Downloads: 2246"
+      ],
+      "display_stack": [],
+      "domain": "doka-labs",
+      "family": "migrations",
+      "id": "package:Doka.EntityFrameworkCore.SafeMigrations",
+      "kind": "package",
+      "label": "Doka.EntityFrameworkCore.SafeMigrations",
+      "label_prefix": null,
+      "radius": 15.0,
+      "scope": "nuget",
+      "show_in_readme": true,
+      "summary": "Core package",
+      "surface_label": "MIGRATIONS",
+      "tags": [
+        "nuget",
+        "migrations"
+      ],
+      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations/",
+      "visibility": "public",
+      "visual": "package",
+      "weight": 0.45,
+      "x": 939.0,
+      "y": 1012.0
+    },
+    {
+      "details": [
+        "Family: migrations",
+        "Observed version: 10.4.3",
+        "Downloads: 1885"
+      ],
+      "display_stack": [],
+      "domain": "doka-labs",
+      "family": "migrations",
+      "id": "package:Doka.EntityFrameworkCore.SafeMigrations.MySql",
+      "kind": "package",
+      "label": "Doka.EntityFrameworkCore.SafeMigrations.MySql",
+      "label_prefix": null,
+      "radius": 15.0,
+      "scope": "nuget",
+      "show_in_readme": true,
+      "summary": "MySQL and MariaDB adapter",
+      "surface_label": "MIGRATIONS",
+      "tags": [
+        "nuget",
+        "migrations"
+      ],
+      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.MySql/",
+      "visibility": "public",
+      "visual": "package",
+      "weight": 0.45,
+      "x": 939.0,
+      "y": 1092.0
+    },
+    {
+      "details": [
+        "Family: migrations",
+        "Observed version: 10.4.3",
+        "Downloads: 1623"
+      ],
+      "display_stack": [],
+      "domain": "doka-labs",
+      "family": "migrations",
+      "id": "package:Doka.EntityFrameworkCore.SafeMigrations.PostgreSql",
+      "kind": "package",
+      "label": "Doka.EntityFrameworkCore.SafeMigrations.PostgreSql",
+      "label_prefix": null,
+      "radius": 15.0,
+      "scope": "nuget",
+      "show_in_readme": true,
+      "summary": "PostgreSQL adapter",
+      "surface_label": "MIGRATIONS",
+      "tags": [
+        "nuget",
+        "migrations"
+      ],
+      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.PostgreSql/",
+      "visibility": "public",
+      "visual": "package",
+      "weight": 0.45,
+      "x": 939.0,
+      "y": 1172.0
+    },
+    {
+      "details": [
+        "Affinity: doka-labs"
+      ],
+      "display_stack": [],
+      "domain": "doka-labs",
+      "family": null,
+      "id": "technology:csharp",
+      "kind": "technology",
+      "label": "C#",
+      "label_prefix": null,
+      "radius": 22.0,
+      "scope": null,
+      "show_in_readme": true,
+      "summary": "C# capability in the language layer.",
+      "surface_label": "C#",
+      "tags": [
+        "language"
+      ],
+      "url": null,
+      "visibility": null,
+      "visual": "language",
+      "weight": 0.55,
+      "x": 1114.2012,
+      "y": 400.27045
+    },
+    {
+      "details": [
+        "Affinity: doka-labs"
+      ],
+      "display_stack": [],
+      "domain": "doka-labs",
+      "family": null,
+      "id": "technology:dotnet",
+      "kind": "technology",
+      "label": ".NET",
+      "label_prefix": null,
+      "radius": 22.0,
+      "scope": null,
+      "show_in_readme": true,
+      "summary": ".NET capability in the runtime layer.",
+      "surface_label": ".NET",
+      "tags": [
+        "runtime"
+      ],
+      "url": null,
+      "visibility": null,
+      "visual": "runtime",
+      "weight": 0.55,
+      "x": 731.7405,
+      "y": 426.77765
+    },
+    {
+      "details": [
+        "Affinity: doka-labs"
+      ],
+      "display_stack": [],
+      "domain": "doka-labs",
+      "family": null,
+      "id": "technology:javascript",
+      "kind": "technology",
+      "label": "JavaScript",
+      "label_prefix": null,
+      "radius": 9.0,
+      "scope": null,
+      "show_in_readme": false,
+      "summary": "JavaScript capability in the language layer.",
+      "surface_label": "JavaScript",
+      "tags": [
+        "language"
+      ],
+      "url": null,
+      "visibility": null,
+      "visual": "language",
+      "weight": 0.18,
+      "x": 989.0985,
+      "y": 624.1282
+    }
+  ],
+  "organizations": [
+    {
+      "id": "doka-labs",
+      "label": "doka-labs",
+      "maintainer": {
+        "role": "Administrator & Core Maintainer",
+        "url": "https://github.com/kdominic89",
+        "username": "kdominic89"
+      },
+      "owner": "doka-labs"
+    }
+  ],
+  "packages": [
+    {
+      "id": "Doka.Caching.MySql",
+      "total_downloads": 1477,
+      "updated_at": null,
+      "url": "https://www.nuget.org/packages/Doka.Caching.MySql/",
+      "version": "10.4.4"
+    },
+    {
+      "id": "Doka.EntityFrameworkCore.MySql",
+      "total_downloads": 3472,
+      "updated_at": null,
+      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql/",
+      "version": "10.4.4"
+    },
+    {
+      "id": "Doka.EntityFrameworkCore.MySql.NetTopologySuite",
+      "total_downloads": 2275,
+      "updated_at": null,
+      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql.NetTopologySuite/",
+      "version": "10.4.4"
+    },
+    {
+      "id": "Doka.EntityFrameworkCore.SafeMigrations",
+      "total_downloads": 2246,
+      "updated_at": null,
+      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations/",
+      "version": "10.4.3"
+    },
+    {
+      "id": "Doka.EntityFrameworkCore.SafeMigrations.MySql",
+      "total_downloads": 1885,
+      "updated_at": null,
+      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.MySql/",
+      "version": "10.4.3"
+    },
+    {
+      "id": "Doka.EntityFrameworkCore.SafeMigrations.PostgreSql",
+      "total_downloads": 1623,
+      "updated_at": null,
+      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.PostgreSql/",
+      "version": "10.4.3"
+    }
+  ],
   "presentation": {
+    "hardware": [],
+    "learning_note": "",
     "main_stack": [
       "C#",
       ".NET",
       "EF Core"
     ],
+    "platform_note": "",
+    "platforms": [],
     "supporting_stack": [
       "MySQL",
       "MariaDB",
       "PostgreSQL"
-    ],
-    "platforms": [],
-    "platform_note": "",
-    "learning_note": "",
-    "hardware": []
+    ]
   },
-  "interests": [],
-  "learning": [],
+  "profile": {
+    "display_name": "doka-labs",
+    "headline": "Libraries and tools for .NET and relational databases.",
+    "maintainer": {
+      "role": "Administrator & Core Maintainer",
+      "url": "https://github.com/kdominic89",
+      "username": "kdominic89"
+    },
+    "organization": "doka-labs",
+    "pages_url": "https://doka-labs.github.io/.github/",
+    "source_url": "https://github.com/doka-labs/.github",
+    "tagline": "Libraries and tools for .NET and relational databases.",
+    "username": "doka-labs",
+    "variant": "organization"
+  },
+  "schema_version": 3,
+  "semantic_hash": "DC4FEBF338BFFAAE",
   "sources": [
     {
       "source": "github:org:doka-labs",
@@ -51,674 +727,14 @@
       "status": "live"
     }
   ],
-  "schema": 2,
-  "mode": "live",
-  "generated_at": "2026-09-26T08:39:56.377301272+00:00",
-  "semantic_hash": "DC4FEBF338BFFAAE",
-  "canvas": {
-    "show_activity_orbit": true,
-    "show_state_hash": false,
-    "show_interests_in_readme": false,
-    "show_technology_labels": true,
-    "show_details": false,
-    "width": 1800,
-    "height": 1320,
-    "motion_seconds": 32
-  },
-  "profile": {
-    "maintainer_username": "kdominic89",
-    "maintainer_role": "Administrator & Core Maintainer",
-    "username": "doka-labs",
-    "display_name": "doka-labs",
-    "organization": "doka-labs",
-    "headline": "Libraries and tools for .NET and relational databases.",
-    "tagline": "Libraries and tools for .NET and relational databases.",
-    "pages_url": "https://doka-labs.github.io/.github/",
-    "source_url": "https://github.com/doka-labs/.github"
-  },
   "stats": {
-    "personal_public_repositories": null,
-    "organization_public_repositories": 3,
+    "contribution_total": null,
     "followers": null,
+    "organization_public_repositories": 3,
     "package_count": 6,
     "package_downloads": 12978,
-    "contribution_total": null,
+    "personal_public_repositories": null,
     "private_repository_count": null
   },
-  "nodes": [
-    {
-      "display_stack": [],
-      "label_prefix": null,
-      "id": "domain:doka-labs",
-      "label": "doka-labs",
-      "surface_label": "doka-labs",
-      "kind": "domain",
-      "domain": "doka-labs",
-      "x": 900.0,
-      "y": 465.0,
-      "radius": 61.0,
-      "weight": 1.0,
-      "summary": "2 public / 1 private",
-      "details": [],
-      "tags": [
-        "organization",
-        "doka-labs"
-      ],
-      "url": "https://github.com/doka-labs",
-      "visibility": null,
-      "show_in_readme": true,
-      "visual": "field",
-      "scope": "organization",
-      "family": null
-    },
-    {
-      "display_stack": [
-        "C#",
-        ".NET",
-        "EF Core"
-      ],
-      "label_prefix": "Doka.EntityFrameworkCore.",
-      "id": "project:mysql",
-      "label": "Doka.EntityFrameworkCore.MySql",
-      "surface_label": "MySql",
-      "kind": "project",
-      "domain": "doka-labs",
-      "x": 470.0,
-      "y": 360.0,
-      "radius": 48.0,
-      "weight": 0.8,
-      "summary": "Provider, spatial support & caching",
-      "details": [],
-      "tags": [],
-      "url": "https://github.com/doka-labs/Doka.EntityFrameworkCore.MySql",
-      "visibility": "public",
-      "show_in_readme": true,
-      "visual": "provider",
-      "scope": "active",
-      "family": null
-    },
-    {
-      "display_stack": [
-        "C#",
-        ".NET",
-        "JavaScript"
-      ],
-      "label_prefix": null,
-      "id": "project:relational-lab",
-      "label": "RelationalLab",
-      "surface_label": "RelationalLab",
-      "kind": "project",
-      "domain": "doka-labs",
-      "x": 900.0,
-      "y": 705.0,
-      "radius": 42.0,
-      "weight": 0.8,
-      "summary": "A test lab for relational databases",
-      "details": [],
-      "tags": [],
-      "url": null,
-      "visibility": "private-abstract",
-      "show_in_readme": true,
-      "visual": "lab",
-      "scope": "active",
-      "family": null
-    },
-    {
-      "display_stack": [
-        "C#",
-        ".NET",
-        "EF Core"
-      ],
-      "label_prefix": "Doka.EntityFrameworkCore.",
-      "id": "project:safe-migrations",
-      "label": "Doka.EntityFrameworkCore.SafeMigrations",
-      "surface_label": "SafeMigrations",
-      "kind": "project",
-      "domain": "doka-labs",
-      "x": 1330.0,
-      "y": 360.0,
-      "radius": 51.0,
-      "weight": 0.8,
-      "summary": "MySQL / MariaDB / PostgreSQL",
-      "details": [],
-      "tags": [],
-      "url": "https://github.com/doka-labs/Doka.EntityFrameworkCore.SafeMigrations",
-      "visibility": "public",
-      "show_in_readme": true,
-      "visual": "migrations",
-      "scope": "active",
-      "family": null
-    },
-    {
-      "display_stack": [],
-      "label_prefix": null,
-      "id": "publication:mysql",
-      "label": "Doka.EntityFrameworkCore.MySql",
-      "surface_label": "Doka.EntityFrameworkCore.MySql",
-      "kind": "publication",
-      "domain": "doka-labs",
-      "x": 76.0,
-      "y": 962.0,
-      "radius": 76.0,
-      "weight": 1.0,
-      "summary": "Published NuGet packages.",
-      "details": [
-        "Doka.Caching.MySql",
-        "Doka.EntityFrameworkCore.MySql",
-        "Doka.EntityFrameworkCore.MySql.NetTopologySuite"
-      ],
-      "tags": [
-        "nuget"
-      ],
-      "url": "https://github.com/doka-labs",
-      "visibility": "public",
-      "show_in_readme": true,
-      "visual": "package-field",
-      "scope": "nuget",
-      "family": null
-    },
-    {
-      "display_stack": [],
-      "label_prefix": null,
-      "id": "package:Doka.Caching.MySql",
-      "label": "Doka.Caching.MySql",
-      "surface_label": "CACHE",
-      "kind": "package",
-      "domain": "doka-labs",
-      "x": 85.0,
-      "y": 1172.0,
-      "radius": 15.0,
-      "weight": 0.45,
-      "summary": "Distributed caching with MySQL",
-      "details": [
-        "Family: cache",
-        "Observed version: 10.4.4",
-        "Downloads: 1477"
-      ],
-      "tags": [
-        "nuget",
-        "cache"
-      ],
-      "url": "https://www.nuget.org/packages/Doka.Caching.MySql/",
-      "visibility": "public",
-      "show_in_readme": true,
-      "visual": "package",
-      "scope": "nuget",
-      "family": "cache"
-    },
-    {
-      "display_stack": [],
-      "label_prefix": null,
-      "id": "package:Doka.EntityFrameworkCore.MySql",
-      "label": "Doka.EntityFrameworkCore.MySql",
-      "surface_label": "PROVIDER",
-      "kind": "package",
-      "domain": "doka-labs",
-      "x": 85.0,
-      "y": 1012.0,
-      "radius": 15.0,
-      "weight": 0.45,
-      "summary": "EF Core provider for MySQL and MariaDB",
-      "details": [
-        "Family: provider",
-        "Observed version: 10.4.4",
-        "Downloads: 3472"
-      ],
-      "tags": [
-        "nuget",
-        "provider"
-      ],
-      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql/",
-      "visibility": "public",
-      "show_in_readme": true,
-      "visual": "package",
-      "scope": "nuget",
-      "family": "provider"
-    },
-    {
-      "display_stack": [],
-      "label_prefix": null,
-      "id": "package:Doka.EntityFrameworkCore.MySql.NetTopologySuite",
-      "label": "Doka.EntityFrameworkCore.MySql.NetTopologySuite",
-      "surface_label": "SPATIAL",
-      "kind": "package",
-      "domain": "doka-labs",
-      "x": 85.0,
-      "y": 1092.0,
-      "radius": 15.0,
-      "weight": 0.45,
-      "summary": "Spatial support",
-      "details": [
-        "Family: spatial",
-        "Observed version: 10.4.4",
-        "Downloads: 2275"
-      ],
-      "tags": [
-        "nuget",
-        "spatial"
-      ],
-      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql.NetTopologySuite/",
-      "visibility": "public",
-      "show_in_readme": true,
-      "visual": "package",
-      "scope": "nuget",
-      "family": "spatial"
-    },
-    {
-      "display_stack": [],
-      "label_prefix": null,
-      "id": "publication:safe-migrations",
-      "label": "Doka.EntityFrameworkCore.SafeMigrations",
-      "surface_label": "Doka.EntityFrameworkCore.SafeMigrations",
-      "kind": "publication",
-      "domain": "doka-labs",
-      "x": 920.0,
-      "y": 962.0,
-      "radius": 76.0,
-      "weight": 1.0,
-      "summary": "Published NuGet packages.",
-      "details": [
-        "Doka.EntityFrameworkCore.SafeMigrations",
-        "Doka.EntityFrameworkCore.SafeMigrations.MySql",
-        "Doka.EntityFrameworkCore.SafeMigrations.PostgreSql"
-      ],
-      "tags": [
-        "nuget"
-      ],
-      "url": "https://github.com/doka-labs",
-      "visibility": "public",
-      "show_in_readme": true,
-      "visual": "package-field",
-      "scope": "nuget",
-      "family": null
-    },
-    {
-      "display_stack": [],
-      "label_prefix": null,
-      "id": "package:Doka.EntityFrameworkCore.SafeMigrations",
-      "label": "Doka.EntityFrameworkCore.SafeMigrations",
-      "surface_label": "MIGRATIONS",
-      "kind": "package",
-      "domain": "doka-labs",
-      "x": 939.0,
-      "y": 1012.0,
-      "radius": 15.0,
-      "weight": 0.45,
-      "summary": "Core package",
-      "details": [
-        "Family: migrations",
-        "Observed version: 10.4.3",
-        "Downloads: 2246"
-      ],
-      "tags": [
-        "nuget",
-        "migrations"
-      ],
-      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations/",
-      "visibility": "public",
-      "show_in_readme": true,
-      "visual": "package",
-      "scope": "nuget",
-      "family": "migrations"
-    },
-    {
-      "display_stack": [],
-      "label_prefix": null,
-      "id": "package:Doka.EntityFrameworkCore.SafeMigrations.MySql",
-      "label": "Doka.EntityFrameworkCore.SafeMigrations.MySql",
-      "surface_label": "MIGRATIONS",
-      "kind": "package",
-      "domain": "doka-labs",
-      "x": 939.0,
-      "y": 1092.0,
-      "radius": 15.0,
-      "weight": 0.45,
-      "summary": "MySQL and MariaDB adapter",
-      "details": [
-        "Family: migrations",
-        "Observed version: 10.4.3",
-        "Downloads: 1885"
-      ],
-      "tags": [
-        "nuget",
-        "migrations"
-      ],
-      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.MySql/",
-      "visibility": "public",
-      "show_in_readme": true,
-      "visual": "package",
-      "scope": "nuget",
-      "family": "migrations"
-    },
-    {
-      "display_stack": [],
-      "label_prefix": null,
-      "id": "package:Doka.EntityFrameworkCore.SafeMigrations.PostgreSql",
-      "label": "Doka.EntityFrameworkCore.SafeMigrations.PostgreSql",
-      "surface_label": "MIGRATIONS",
-      "kind": "package",
-      "domain": "doka-labs",
-      "x": 939.0,
-      "y": 1172.0,
-      "radius": 15.0,
-      "weight": 0.45,
-      "summary": "PostgreSQL adapter",
-      "details": [
-        "Family: migrations",
-        "Observed version: 10.4.3",
-        "Downloads: 1623"
-      ],
-      "tags": [
-        "nuget",
-        "migrations"
-      ],
-      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.PostgreSql/",
-      "visibility": "public",
-      "show_in_readme": true,
-      "visual": "package",
-      "scope": "nuget",
-      "family": "migrations"
-    },
-    {
-      "display_stack": [],
-      "label_prefix": null,
-      "id": "technology:csharp",
-      "label": "C#",
-      "surface_label": "C#",
-      "kind": "technology",
-      "domain": "doka-labs",
-      "x": 1114.2012,
-      "y": 400.27045,
-      "radius": 22.0,
-      "weight": 0.55,
-      "summary": "C# capability in the language layer.",
-      "details": [
-        "Affinity: doka-labs"
-      ],
-      "tags": [
-        "language"
-      ],
-      "url": null,
-      "visibility": null,
-      "show_in_readme": true,
-      "visual": "language",
-      "scope": null,
-      "family": null
-    },
-    {
-      "display_stack": [],
-      "label_prefix": null,
-      "id": "technology:dotnet",
-      "label": ".NET",
-      "surface_label": ".NET",
-      "kind": "technology",
-      "domain": "doka-labs",
-      "x": 731.7405,
-      "y": 426.77765,
-      "radius": 22.0,
-      "weight": 0.55,
-      "summary": ".NET capability in the runtime layer.",
-      "details": [
-        "Affinity: doka-labs"
-      ],
-      "tags": [
-        "runtime"
-      ],
-      "url": null,
-      "visibility": null,
-      "show_in_readme": true,
-      "visual": "runtime",
-      "scope": null,
-      "family": null
-    },
-    {
-      "display_stack": [],
-      "label_prefix": null,
-      "id": "technology:javascript",
-      "label": "JavaScript",
-      "surface_label": "JavaScript",
-      "kind": "technology",
-      "domain": "doka-labs",
-      "x": 989.0985,
-      "y": 624.1282,
-      "radius": 9.0,
-      "weight": 0.18,
-      "summary": "JavaScript capability in the language layer.",
-      "details": [
-        "Affinity: doka-labs"
-      ],
-      "tags": [
-        "language"
-      ],
-      "url": null,
-      "visibility": null,
-      "show_in_readme": false,
-      "visual": "language",
-      "scope": null,
-      "family": null
-    }
-  ],
-  "edges": [
-    {
-      "from": "domain:doka-labs",
-      "to": "project:mysql",
-      "kind": "contains",
-      "weight": 0.8,
-      "show_in_readme": true
-    },
-    {
-      "from": "technology:csharp",
-      "to": "project:mysql",
-      "kind": "implemented-with",
-      "weight": 0.75,
-      "show_in_readme": true
-    },
-    {
-      "from": "technology:dotnet",
-      "to": "project:mysql",
-      "kind": "implemented-with",
-      "weight": 0.75,
-      "show_in_readme": true
-    },
-    {
-      "from": "domain:doka-labs",
-      "to": "project:relational-lab",
-      "kind": "contains",
-      "weight": 0.8,
-      "show_in_readme": true
-    },
-    {
-      "from": "technology:csharp",
-      "to": "project:relational-lab",
-      "kind": "implemented-with",
-      "weight": 0.75,
-      "show_in_readme": true
-    },
-    {
-      "from": "technology:dotnet",
-      "to": "project:relational-lab",
-      "kind": "implemented-with",
-      "weight": 0.75,
-      "show_in_readme": true
-    },
-    {
-      "from": "technology:javascript",
-      "to": "project:relational-lab",
-      "kind": "implemented-with",
-      "weight": 0.75,
-      "show_in_readme": true
-    },
-    {
-      "from": "domain:doka-labs",
-      "to": "project:safe-migrations",
-      "kind": "contains",
-      "weight": 0.8,
-      "show_in_readme": true
-    },
-    {
-      "from": "technology:csharp",
-      "to": "project:safe-migrations",
-      "kind": "implemented-with",
-      "weight": 0.75,
-      "show_in_readme": true
-    },
-    {
-      "from": "technology:dotnet",
-      "to": "project:safe-migrations",
-      "kind": "implemented-with",
-      "weight": 0.75,
-      "show_in_readme": true
-    },
-    {
-      "from": "domain:doka-labs",
-      "to": "publication:mysql",
-      "kind": "contains",
-      "weight": 1.0,
-      "show_in_readme": true
-    },
-    {
-      "from": "publication:mysql",
-      "to": "package:Doka.Caching.MySql",
-      "kind": "publishes",
-      "weight": 0.5,
-      "show_in_readme": true
-    },
-    {
-      "from": "publication:mysql",
-      "to": "package:Doka.EntityFrameworkCore.MySql",
-      "kind": "publishes",
-      "weight": 0.5,
-      "show_in_readme": true
-    },
-    {
-      "from": "publication:mysql",
-      "to": "package:Doka.EntityFrameworkCore.MySql.NetTopologySuite",
-      "kind": "publishes",
-      "weight": 0.5,
-      "show_in_readme": true
-    },
-    {
-      "from": "technology:csharp",
-      "to": "publication:mysql",
-      "kind": "implemented-with",
-      "weight": 0.7,
-      "show_in_readme": true
-    },
-    {
-      "from": "technology:dotnet",
-      "to": "publication:mysql",
-      "kind": "implemented-with",
-      "weight": 0.7,
-      "show_in_readme": true
-    },
-    {
-      "from": "domain:doka-labs",
-      "to": "publication:safe-migrations",
-      "kind": "contains",
-      "weight": 1.0,
-      "show_in_readme": true
-    },
-    {
-      "from": "publication:safe-migrations",
-      "to": "package:Doka.EntityFrameworkCore.SafeMigrations",
-      "kind": "publishes",
-      "weight": 0.5,
-      "show_in_readme": true
-    },
-    {
-      "from": "publication:safe-migrations",
-      "to": "package:Doka.EntityFrameworkCore.SafeMigrations.MySql",
-      "kind": "publishes",
-      "weight": 0.5,
-      "show_in_readme": true
-    },
-    {
-      "from": "publication:safe-migrations",
-      "to": "package:Doka.EntityFrameworkCore.SafeMigrations.PostgreSql",
-      "kind": "publishes",
-      "weight": 0.5,
-      "show_in_readme": true
-    },
-    {
-      "from": "technology:csharp",
-      "to": "publication:safe-migrations",
-      "kind": "implemented-with",
-      "weight": 0.7,
-      "show_in_readme": true
-    },
-    {
-      "from": "technology:dotnet",
-      "to": "publication:safe-migrations",
-      "kind": "implemented-with",
-      "weight": 0.7,
-      "show_in_readme": true
-    },
-    {
-      "from": "domain:doka-labs",
-      "to": "technology:csharp",
-      "kind": "affinity",
-      "weight": 0.35,
-      "show_in_readme": true
-    },
-    {
-      "from": "domain:doka-labs",
-      "to": "technology:dotnet",
-      "kind": "affinity",
-      "weight": 0.35,
-      "show_in_readme": true
-    },
-    {
-      "from": "domain:doka-labs",
-      "to": "technology:javascript",
-      "kind": "affinity",
-      "weight": 0.12,
-      "show_in_readme": false
-    }
-  ],
-  "activity": [],
-  "packages": [
-    {
-      "id": "Doka.Caching.MySql",
-      "version": "10.4.4",
-      "total_downloads": 1477,
-      "updated_at": null,
-      "url": "https://www.nuget.org/packages/Doka.Caching.MySql/"
-    },
-    {
-      "id": "Doka.EntityFrameworkCore.MySql",
-      "version": "10.4.4",
-      "total_downloads": 3472,
-      "updated_at": null,
-      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql/"
-    },
-    {
-      "id": "Doka.EntityFrameworkCore.MySql.NetTopologySuite",
-      "version": "10.4.4",
-      "total_downloads": 2275,
-      "updated_at": null,
-      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql.NetTopologySuite/"
-    },
-    {
-      "id": "Doka.EntityFrameworkCore.SafeMigrations",
-      "version": "10.4.3",
-      "total_downloads": 2246,
-      "updated_at": null,
-      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations/"
-    },
-    {
-      "id": "Doka.EntityFrameworkCore.SafeMigrations.MySql",
-      "version": "10.4.3",
-      "total_downloads": 1885,
-      "updated_at": null,
-      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.MySql/"
-    },
-    {
-      "id": "Doka.EntityFrameworkCore.SafeMigrations.PostgreSql",
-      "version": "10.4.3",
-      "total_downloads": 1623,
-      "updated_at": null,
-      "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.PostgreSql/"
-    }
-  ],
   "warnings": []
 }

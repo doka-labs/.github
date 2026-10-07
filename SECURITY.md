@@ -1,15 +1,27 @@
 # Security
 
-Report suspected vulnerabilities through the repository's GitHub security advisory mechanism when
-available. Avoid placing credentials, private project source, or exploit payloads in public issues.
+Report vulnerabilities in this organization's configuration or publication workflow through
+[GitHub private vulnerability reporting](https://github.com/doka-labs/.github/security/advisories/new)
+when that repository feature is available. This document does not establish another organization
+security contact. Do not place credentials or private project information in public issues.
 
-The primary boundaries are public configuration, remote API responses, retained history, generated
-SVG, and browser state. Approved private-project summaries are public by design; see [Privacy](PRIVACY.md).
+Report Sourcefield CLI, collection, import, generation, installation, or browser-runtime vulnerabilities
+through the pinned upstream
+[security policy](https://github.com/kdominic89/sourcefield/blob/9c69b59c0d85eb26418fb7c7800be2b54ac55a8b/SECURITY.md).
+Include the exact release/source SHA, minimal reproduction, input an attacker controls, and expected
+impact. Use synthetic data and redact sensitive captures.
 
-Configuration and state validation reject malformed identifiers, unsafe links and inconsistent
-references. Rendering escapes text. Browser code validates fetched state and uses a restrictive
-content security policy with local resources. Public collection errors are bounded and redacted.
-These controls are defense in depth, not a guarantee that arbitrary unreviewed prose is safe to publish.
+This consumer controls which facts become public, collection credentials, workflow permissions,
+and repository/Pages publication. Required boundaries include local canonical content, remote metadata,
+retained captures/history, generated SVG/JSON, and browser input. Approved private summaries are public
+by design; see [Privacy](PRIVACY.md).
 
-Never add tokens to configuration or fixtures. Use environment-provided credentials only for public collection. Review workflow permissions and immutable action references before
-publishing. Native binaries, WASM build output and caches are not source-controlled.
+Keep the release lock and reusable workflow source SHA identical. Use the authenticated matching
+CLI/browser pair and scripts from that source revision. Sourcefield validates input, escapes output,
+and constrains filesystem ownership; these controls do not guarantee that reviewed releases or arbitrary
+prose are vulnerability-free. Inspect credentials, permissions, and output before publishing.
+
+Generation has read-only repository permissions. The consumer publication job checks the expected
+HEAD and applies owned files; deployment depends on successful publication of that same candidate.
+Do not bypass these checks to publish stale inputs. Runtime output and caches remain ignored by Git
+while the validated complete runtime is included in Pages.

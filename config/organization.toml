@@ -1,0 +1,194 @@
+# Canonical public doka-labs content, shared by organization and personal profiles.
+
+schema_version = 1
+id = "doka-labs"
+owner = "doka-labs"
+label = "doka-labs"
+summary = "Public and private projects."
+
+[maintainer]
+username = "kdominic89"
+role = "Administrator & Core Maintainer"
+url = "https://github.com/kdominic89"
+
+[[technologies]]
+id = "csharp"
+label = "C#"
+category = "language"
+affinities = ["doka-labs"]
+cross_domain = false
+show_in_readme = true
+
+[[technologies]]
+id = "dotnet"
+label = ".NET"
+category = "runtime"
+affinities = ["doka-labs"]
+cross_domain = false
+show_in_readme = true
+
+[[technologies]]
+id = "javascript"
+label = "JavaScript"
+category = "language"
+affinities = ["doka-labs"]
+cross_domain = false
+show_in_readme = false
+
+[[projects]]
+id = "mysql"
+label = "Doka.EntityFrameworkCore.MySql"
+surface_label = "MySql"
+label_prefix = "Doka.EntityFrameworkCore."
+visibility = "public"
+status = "active"
+visual = "provider"
+summary = "Provider, spatial support & caching"
+repository = "doka-labs/Doka.EntityFrameworkCore.MySql"
+display_stack = ["C#", ".NET", "EF Core"]
+implemented_with = ["csharp", "dotnet"]
+show_in_readme = true
+
+[[projects]]
+id = "safe-migrations"
+label = "Doka.EntityFrameworkCore.SafeMigrations"
+surface_label = "SafeMigrations"
+label_prefix = "Doka.EntityFrameworkCore."
+visibility = "public"
+status = "active"
+visual = "migrations"
+summary = "MySQL / MariaDB / PostgreSQL / SQLite / SQL Server"
+repository = "doka-labs/Doka.EntityFrameworkCore.SafeMigrations"
+display_stack = ["C#", ".NET", "EF Core"]
+implemented_with = ["csharp", "dotnet"]
+show_in_readme = true
+icon = "builtin:database-safe"
+
+[[projects]]
+id = "relational-lab"
+label = "RelationalLab"
+surface_label = "RelationalLab"
+visibility = "private-abstract"
+status = "active"
+visual = "lab"
+summary = "A test lab for relational databases"
+display_stack = ["C#", ".NET", "JavaScript"]
+implemented_with = ["csharp", "dotnet", "javascript"]
+show_in_readme = true
+
+[[projects]]
+id = "nested-set"
+label = "Doka.EntityFrameworkCore.NestedSet"
+surface_label = "NestedSet"
+label_prefix = "Doka.EntityFrameworkCore."
+visibility = "public"
+status = "active"
+visual = "hierarchy"
+summary = "Ordered hierarchies for EF Core"
+repository = "doka-labs/Doka.EntityFrameworkCore.NestedSet"
+display_stack = ["C#", ".NET", "EF Core"]
+implemented_with = ["csharp", "dotnet"]
+show_in_readme = true
+
+[[publications]]
+id = "mysql"
+label = "Doka.EntityFrameworkCore.MySql"
+surface_label = "Doka.EntityFrameworkCore.MySql"
+registry = "nuget"
+owner = "doka-labs"
+summary = "Published NuGet packages."
+discovery_prefixes = ["Doka.EntityFrameworkCore.MySql", "Doka.Caching.MySql"]
+label_prefix = "Doka.EntityFrameworkCore."
+technologies = ["csharp", "dotnet"]
+show_in_readme = true
+
+[[publications.packages]]
+id = "Doka.Caching.MySql"
+family = "cache"
+url = "https://www.nuget.org/packages/Doka.Caching.MySql/"
+summary = "Distributed caching with MySQL"
+
+[[publications.packages]]
+id = "Doka.EntityFrameworkCore.MySql"
+family = "provider"
+url = "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql/"
+summary = "EF Core provider for MySQL and MariaDB"
+
+[[publications.packages]]
+id = "Doka.EntityFrameworkCore.MySql.NetTopologySuite"
+family = "spatial"
+url = "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql.NetTopologySuite/"
+summary = "Spatial support"
+
+[[publications]]
+id = "safe-migrations"
+label = "Doka.EntityFrameworkCore.SafeMigrations"
+surface_label = "Doka.EntityFrameworkCore.SafeMigrations"
+registry = "nuget"
+owner = "doka-labs"
+summary = "Published NuGet packages."
+discovery_prefixes = ["Doka.EntityFrameworkCore.SafeMigrations"]
+label_prefix = "Doka.EntityFrameworkCore.SafeMigrations."
+core_label = "Core"
+technologies = ["csharp", "dotnet"]
+show_in_readme = true
+
+[publications.label_overrides]
+"Doka.EntityFrameworkCore.SafeMigrations.SqlServer" = "SQL Server"
+
+[[publications.packages]]
+id = "Doka.EntityFrameworkCore.SafeMigrations"
+family = "migrations"
+url = "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations/"
+summary = "Core package"
+
+[[publications.packages]]
+id = "Doka.EntityFrameworkCore.SafeMigrations.MySql"
+family = "migrations"
+url = "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.MySql/"
+summary = "MySQL and MariaDB adapter"
+
+[[publications.packages]]
+id = "Doka.EntityFrameworkCore.SafeMigrations.PostgreSql"
+family = "migrations"
+url = "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.PostgreSql/"
+summary = "PostgreSQL adapter"
+
+[[publications.packages]]
+id = "Doka.EntityFrameworkCore.SafeMigrations.Sqlite"
+family = "migrations"
+url = "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.Sqlite/"
+summary = "SQLite adapter"
+
+[[publications.packages]]
+id = "Doka.EntityFrameworkCore.SafeMigrations.SqlServer"
+family = "migrations"
+url = "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.SqlServer/"
+summary = "SQL Server adapter"
+
+[[publications]]
+id = "nested-set"
+label = "Doka.EntityFrameworkCore.NestedSet"
+surface_label = "Doka.EntityFrameworkCore.NestedSet"
+registry = "nuget"
+owner = "doka-labs"
+summary = "Published NuGet packages."
+discovery_prefixes = ["Doka.NestedSet", "Doka.EntityFrameworkCore.NestedSet"]
+label_prefix = "Doka."
+technologies = ["csharp", "dotnet"]
+show_in_readme = true
+
+[publications.label_overrides]
+"Doka.NestedSet" = "Doka.NestedSet"
+
+[[publications.packages]]
+id = "Doka.EntityFrameworkCore.NestedSet"
+family = "hierarchy"
+url = "https://www.nuget.org/packages/Doka.EntityFrameworkCore.NestedSet/"
+summary = "Ordered hierarchies, queries, and mutations"
+
+[[publications.packages]]
+id = "Doka.NestedSet"
+family = "hierarchy"
+url = "https://www.nuget.org/packages/Doka.NestedSet/"
+summary = "EF-independent node and bounds contracts"
