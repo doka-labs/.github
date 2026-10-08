@@ -1,11 +1,11 @@
 {
-  "generator_version": "0.1.0",
-  "source_revision": "9c69b59c0d85eb26418fb7c7800be2b54ac55a8b",
-  "generator_fingerprint": "b9f54acf14f00ad974905406de4fe578f991d8ab899bc2bcc9933bfe1e91c9da",
+  "generator_version": "0.1.1",
+  "source_revision": "b12eb4c72d60fbc075776a6ccc4bc15736db28af",
+  "generator_fingerprint": "56d3b9d25c2f7f9a156144a41db8b65b27f4355b5b779d11ff35f66e38693cfe",
   "generator": "sourcefield-rust",
-  "semantic_hash": "E5289F57626071D6",
-  "generated_at": "2026-10-07T10:18:39.883159214+00:00",
-  "mode": "live",
+  "semantic_hash": "D339988187297421",
+  "generated_at": "1970-01-01T00:00:00Z",
+  "mode": "preview",
   "node_count": 21,
   "edge_count": 35
 }

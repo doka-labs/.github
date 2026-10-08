@@ -18,20 +18,30 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: kdominic89/sourcefield
-          ref: 9c69b59c0d85eb26418fb7c7800be2b54ac55a8b
+          ref: b12eb4c72d60fbc075776a6ccc4bc15736db28af
           path: .sourcefield-tools
           persist-credentials: false
       - name: Verify the consumer lock and workflow reference
-        run: python3 -B .sourcefield-tools/scripts/check_pin.py --lock sourcefield.lock.json --workflow .github/workflows/update-profile.yml --own-commit 9c69b59c0d85eb26418fb7c7800be2b54ac55a8b
+        run: >-
+          python3 -B .sourcefield-tools/scripts/check_pin.py
+          --lock sourcefield.lock.json
+          --workflow .github/workflows/update-profile.yml
+          --own-commit b12eb4c72d60fbc075776a6ccc4bc15736db28af
       - name: Verify the released CLI and matching browser runtime
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python3 -B .sourcefield-tools/scripts/bootstrap_release.py --lock sourcefield.lock.json --destination "$RUNNER_TEMP/sourcefield-install"
+        run: >-
+          python3 -B .sourcefield-tools/scripts/bootstrap_release.py
+          --lock sourcefield.lock.json
+          --destination "$RUNNER_TEMP/sourcefield-install"
       - name: Test consumer content and generation boundaries
         env:
           SOURCEFIELD_INSTALLATION: ${{ runner.temp }}/sourcefield-install
         run: python3 -B -m unittest discover -s tests -p 'test_*.py'
       - name: Generate an isolated offline candidate
         run: |
-          python3 -B .sourcefield-tools/scripts/consumer_candidate.py --source "$GITHUB_WORKSPACE" --destination "$RUNNER_TEMP/sourcefield-preview" --installation "$RUNNER_TEMP/sourcefield-install" --readmes '["README.md", "profile/README.md"]' --offline
-          python3 -B .sourcefield-tools/scripts/validate_artifact.py --root "$RUNNER_TEMP/sourcefield-preview" --workflow-root "$GITHUB_WORKSPACE" --require-wasm
+          python3 -B .sourcefield-tools/scripts/consumer_candidate.py --source "$GITHUB_WORKSPACE" \
+            --destination "$RUNNER_TEMP/sourcefield-preview" --installation "$RUNNER_TEMP/sourcefield-install" \
+            --readmes '["README.md", "profile/README.md"]' --offline
+          python3 -B .sourcefield-tools/scripts/validate_artifact.py --root "$RUNNER_TEMP/sourcefield-preview" \
+            --workflow-root "$GITHUB_WORKSPACE" --require-wasm

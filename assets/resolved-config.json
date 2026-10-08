@@ -240,27 +240,28 @@
       "components": []
     },
     {
-      "radius": 48.0,
+      "icon": "builtin:database-safe",
+      "radius": 51.0,
       "display_stack": [
         "C#",
         ".NET",
         "EF Core"
       ],
       "label_prefix": "Doka.EntityFrameworkCore.",
-      "id": "doka-labs/nested-set",
-      "label": "Doka.EntityFrameworkCore.NestedSet",
-      "surface_label": "NestedSet",
+      "id": "doka-labs/safe-migrations",
+      "label": "Doka.EntityFrameworkCore.SafeMigrations",
+      "surface_label": "SafeMigrations",
       "domain": "doka-labs",
       "visibility": "public",
       "status": "active",
-      "visual": "hierarchy",
+      "visual": "migrations",
       "anchor": [
-        1280.0,
-        685.0
+        1330.0,
+        345.0
       ],
       "weight": 0.8,
-      "summary": "Ordered hierarchies for EF Core",
-      "repository": "doka-labs/Doka.EntityFrameworkCore.NestedSet",
+      "summary": "MySQL / MariaDB / PostgreSQL / SQLite / SQL Server",
+      "repository": "doka-labs/Doka.EntityFrameworkCore.SafeMigrations",
       "implemented_with": [
         "doka-labs/csharp",
         "doka-labs/dotnet"
@@ -305,28 +306,27 @@
       "components": []
     },
     {
-      "icon": "builtin:database-safe",
-      "radius": 51.0,
+      "radius": 48.0,
       "display_stack": [
         "C#",
         ".NET",
         "EF Core"
       ],
       "label_prefix": "Doka.EntityFrameworkCore.",
-      "id": "doka-labs/safe-migrations",
-      "label": "Doka.EntityFrameworkCore.SafeMigrations",
-      "surface_label": "SafeMigrations",
+      "id": "doka-labs/nested-set",
+      "label": "Doka.EntityFrameworkCore.NestedSet",
+      "surface_label": "NestedSet",
       "domain": "doka-labs",
       "visibility": "public",
       "status": "active",
-      "visual": "migrations",
+      "visual": "hierarchy",
       "anchor": [
-        1330.0,
-        345.0
+        1280.0,
+        685.0
       ],
       "weight": 0.8,
-      "summary": "MySQL / MariaDB / PostgreSQL / SQLite / SQL Server",
-      "repository": "doka-labs/Doka.EntityFrameworkCore.SafeMigrations",
+      "summary": "Ordered hierarchies for EF Core",
+      "repository": "doka-labs/Doka.EntityFrameworkCore.NestedSet",
       "implemented_with": [
         "doka-labs/csharp",
         "doka-labs/dotnet"

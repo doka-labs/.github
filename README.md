@@ -16,12 +16,12 @@
 <!-- sourcefield:projects:start -->
 ### Projects
 
-#### doka-labs
-
-- [Doka.EntityFrameworkCore.MySql](https://github.com/doka-labs/Doka.EntityFrameworkCore.MySql): Provider, spatial support &amp; caching
-- [Doka.EntityFrameworkCore.NestedSet](https://github.com/doka-labs/Doka.EntityFrameworkCore.NestedSet): Ordered hierarchies for EF Core
-- RelationalLab: A test lab for relational databases
-- [Doka.EntityFrameworkCore.SafeMigrations](https://github.com/doka-labs/Doka.EntityFrameworkCore.SafeMigrations): MySQL / MariaDB / PostgreSQL / SQLite / SQL Server
+| Project | What it does | Stack |
+| --- | --- | --- |
+| [Doka.EntityFrameworkCore.MySql](https://github.com/doka-labs/Doka.EntityFrameworkCore.MySql) | Provider, spatial support &amp; caching | C# / .NET / EF Core |
+| [Doka.EntityFrameworkCore.SafeMigrations](https://github.com/doka-labs/Doka.EntityFrameworkCore.SafeMigrations) | MySQL / MariaDB / PostgreSQL / SQLite / SQL Server | C# / .NET / EF Core |
+| RelationalLab | A test lab for relational databases | C# / .NET / JavaScript |
+| [Doka.EntityFrameworkCore.NestedSet](https://github.com/doka-labs/Doka.EntityFrameworkCore.NestedSet) | Ordered hierarchies for EF Core | C# / .NET / EF Core |
 <!-- sourcefield:projects:end -->
 <!-- sourcefield:packages:start -->
 ### NuGet

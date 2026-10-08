@@ -17,6 +17,21 @@ the built-in token for public GitHub collection and does not inherit all caller 
 validation, scoped source status, and redacted diagnostics support this boundary; editorial review
 is still necessary because structural validation cannot prove arbitrary prose contains no secret.
 
+The current reusable workflow exposes optional `PROFILE_TOKEN` separately from the typed private
+aggregate selection. Its presence alone never enables collection. This organization profile does
+not select personal/private aggregate collection; a maintainer link is not that selection.
+
+Offline generation and locked replay preserve an existing approved `assets/source-snapshot.json`
+byte for byte, including its date, source statuses, and earlier observations. An approved raw capture
+can retain a prior aggregate while current policy omits it from rendering; disabling current rendering
+does not erase retained public input. `assets/render-snapshot.json` separately records the effective
+policy-filtered input. Offline Preview is undated there. Locked replay reuses the recorded effective
+input rather than today's credential selection. Keep both snapshots and their generation record.
+
+A first online refresh can collect without a prior capture or seed. Missing offline/replay captures
+fail, and malformed existing captures remain fatal. This distinction does not authorize access to
+private source or relax the organization profile's configured collection scope.
+
 Published assets, both managed READMEs, the complete Pages artifact, and retained history are public.
 Removing content from current configuration does not erase earlier history or Git commits. Rolling
 retention is limited by `history_limit = 24`; separate migration recovery copies require their own

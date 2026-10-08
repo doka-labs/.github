@@ -1,16 +1,16 @@
 # Primary sources
 
-Consumer migration contracts checked on October 7, 2026. Upstream source documentation below was
-read at commit `9c69b59c0d85eb26418fb7c7800be2b54ac55a8b`, the source of immutable release `v0.1.0`.
+Selected release and consumer upgrade contracts checked on October 8, 2026. Upstream source documentation below was
+read at commit `b12eb4c72d60fbc075776a6ccc4bc15736db28af`, the source of immutable release `v0.1.1`.
 These links explain the contracts; successful local or hosted execution requires separate evidence.
 
 | Consumer contract | Primary source |
 | --- | --- |
-| Matched release lock, verified shared installation, workflow pin, and candidate publication | [Pinned Sourcefield distribution](https://github.com/kdominic89/sourcefield/blob/9c69b59c0d85eb26418fb7c7800be2b54ac55a8b/docs/distribution.md) |
-| Explicit destinations, offline/locked replay, migration, organization extraction, and recovery | [Pinned Sourcefield operations](https://github.com/kdominic89/sourcefield/blob/9c69b59c0d85eb26418fb7c7800be2b54ac55a8b/docs/operations.md) |
-| Canonical content imports and consumer layout | [Pinned Sourcefield configuration](https://github.com/kdominic89/sourcefield/blob/9c69b59c0d85eb26418fb7c7800be2b54ac55a8b/docs/configuration.md) |
-| Built-in icon identity, including `database-safe` | [Pinned Sourcefield icons](https://github.com/kdominic89/sourcefield/blob/9c69b59c0d85eb26418fb7c7800be2b54ac55a8b/docs/icons.md) |
-| Caller-owned permissions, checked publication, and deployment order | [Pinned consumer workflow template](https://github.com/kdominic89/sourcefield/blob/9c69b59c0d85eb26418fb7c7800be2b54ac55a8b/docs/consumer-workflow.yml.template) |
+| Matched release lock, verified shared installation, workflow pin, and candidate publication | [Pinned Sourcefield distribution](https://github.com/kdominic89/sourcefield/blob/b12eb4c72d60fbc075776a6ccc4bc15736db28af/docs/distribution.md) |
+| Explicit destinations, retained/raw and effective render inputs, schema 2 replay, and recovery | [Pinned Sourcefield operations](https://github.com/kdominic89/sourcefield/blob/b12eb4c72d60fbc075776a6ccc4bc15736db28af/docs/operations.md) |
+| Canonical content imports and consumer layout | [Pinned Sourcefield configuration](https://github.com/kdominic89/sourcefield/blob/b12eb4c72d60fbc075776a6ccc4bc15736db28af/docs/configuration.md) |
+| Built-in icon identity, including `database-safe` | [Pinned Sourcefield icons](https://github.com/kdominic89/sourcefield/blob/b12eb4c72d60fbc075776a6ccc4bc15736db28af/docs/icons.md) |
+| Caller-owned permissions, checked publication, and deployment order | [Pinned consumer workflow template](https://github.com/kdominic89/sourcefield/blob/b12eb4c72d60fbc075776a6ccc4bc15736db28af/docs/consumer-workflow.yml.template) |
 | GitHub reusable workflow calling convention and immutable SHA references | [GitHub reusable workflows](https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows) |
 | Organization profile README placement | [GitHub organization profiles](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/customizing-your-organizations-profile) |
 | Pages artifact and deployment job requirements | [GitHub Pages custom workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) |

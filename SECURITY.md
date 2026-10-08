@@ -7,7 +7,7 @@ security contact. Do not place credentials or private project information in pub
 
 Report Sourcefield CLI, collection, import, generation, installation, or browser-runtime vulnerabilities
 through the pinned upstream
-[security policy](https://github.com/kdominic89/sourcefield/blob/9c69b59c0d85eb26418fb7c7800be2b54ac55a8b/SECURITY.md).
+[security policy](https://github.com/kdominic89/sourcefield/blob/b12eb4c72d60fbc075776a6ccc4bc15736db28af/SECURITY.md).
 Include the exact release/source SHA, minimal reproduction, input an attacker controls, and expected
 impact. Use synthetic data and redact sensitive captures.
 

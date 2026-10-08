@@ -13,17 +13,17 @@ Actions and repository publication permissions. In **Settings > Actions > Genera
 existing selected-actions policy, including this exact reusable workflow entry:
 
 ```text
-kdominic89/sourcefield/.github/workflows/generate.yml@9c69b59c0d85eb26418fb7c7800be2b54ac55a8b
+kdominic89/sourcefield/.github/workflows/generate.yml@b12eb4c72d60fbc075776a6ccc4bc15736db28af
 ```
 
-The repository allowlist was verified on October 7, 2026 to include this entry. The rule authorizes
+The repository allowlist was verified on October 8, 2026 to include this entry. The rule authorizes
 only this workflow at this commit; it does not change other repositories or allow every external
 action. See
 [GitHub's documented workflow allowlist syntax](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#allowing-select-actions-and-reusable-workflows-to-run).
 
 The update workflow supports manual dispatch and the daily cron `17 3 * * *` (03:17 UTC).
 It calls Sourcefield's read-only reusable generator at
-`9c69b59c0d85eb26418fb7c7800be2b54ac55a8b`, matching `sourcefield.lock.json`. Strict live collection
+`b12eb4c72d60fbc075776a6ccc4bc15736db28af`, matching `sourcefield.lock.json`. Strict live collection
 must succeed before publication. The caller uploads the complete candidate Pages artifact, checks
 the expected repository HEAD, publishes only owned output and selected READMEs, and then deploys.
 A push or pull request runs a read-only validation job using shared tooling from the same source SHA:
@@ -38,7 +38,7 @@ after repository publication, retry deployment of that same saved artifact.
 ## Optional local preview
 
 Local preview uses Python 3.11+ and shared tooling from a Sourcefield checkout at exactly
-`9c69b59c0d85eb26418fb7c7800be2b54ac55a8b`. Confirm that checkout with `git rev-parse HEAD` before
+`b12eb4c72d60fbc075776a6ccc4bc15736db28af`. Confirm that checkout with `git rev-parse HEAD` before
 using its scripts. A shared installation must contain the verified native CLI and matching browser
 runtime selected by this consumer's lock. Reuse that installation across consumers; no per-repository
 manual installation or Rust build is needed.
@@ -49,7 +49,7 @@ network access and suitable read authentication:
 
 ```sh
 SOURCEFIELD_SOURCE=/path/to/pinned/sourcefield
-export SOURCEFIELD_INSTALLATION=/path/to/shared/sourcefield-v0.1.0
+export SOURCEFIELD_INSTALLATION=/path/to/shared/sourcefield-v0.1.1
 CONSUMER_REPOSITORY=/path/to/doka-labs
 
 python3 -B "$SOURCEFIELD_SOURCE/scripts/bootstrap_release.py" \
@@ -59,7 +59,7 @@ python3 -B "$SOURCEFIELD_SOURCE/scripts/bootstrap_release.py" \
 
 Keep existing installations intact. The bootstrap verifies the immutable release, archive digests,
 and attestations before publishing a matched CLI/runtime pair. See the pinned upstream
-[installation contract](https://github.com/kdominic89/sourcefield/blob/9c69b59c0d85eb26418fb7c7800be2b54ac55a8b/docs/distribution.md#verified-installation).
+[installation contract](https://github.com/kdominic89/sourcefield/blob/b12eb4c72d60fbc075776a6ccc4bc15736db28af/docs/distribution.md#verified-installation).
 
 Check the consumer pin, then generate into a new external directory:
 
@@ -81,11 +81,25 @@ python3 -B -m http.server 8000 \
 
 Open `http://127.0.0.1:8000/` for module and WASM loading. The candidate tool reads tracked consumer
 inputs; it omits untracked new files. Use the reviewed committed input set for this path, and handle
-pre-commit review separately. The destination must not already exist. Default `--offline` uses the
-empty, explicitly Preview seed in `config/offline-snapshot.json`; it does not reproduce current
-collected metrics. That tracked seed is required by the released CLI, including strict refresh.
-Missing required inputs fail explicitly. Use `--offline --locked` to replay retained captured
-observations and resolved inputs with their matching generator identity. Neither mode is a live refresh.
+pre-commit review separately. The destination must not already exist. The wrapper selects
+`--fallback-snapshot assets/source-snapshot.json` for retained observations and live fallback.
+Offline generation and locked replay require this capture and preserve its existing bytes, original
+date, source statuses, and package observations. Missing offline/replay captures fail without
+substituting the empty authoring seed. Neither mode performs fresh collection.
+
+The separate `assets/render-snapshot.json` stores effective policy-filtered rendering input. Offline
+Preview has empty `fetched_at` there while the retained source capture keeps its genuine date. Keep
+both snapshots and the matching generation record tracked. `--offline --locked` verifies recorded
+inputs and generator identity and reuses the recorded effective input without applying today's
+credential selection. Envelope schema 2 binds six fixed inputs. Only envelope schema 2 is supported.
+Older generator records require regeneration with a matching CLI/runtime pair.
+
+Omit `--offline` for a strict online refresh. Its first run can collect without a previous capture or
+`config/offline-snapshot.json`. Malformed existing captures, unsupported snapshot schemas, and
+filesystem errors remain fatal; strict incomplete or failed collection leaves output unchanged.
+Without a usable dated prior capture,
+collection failure cannot succeed through fallback. The empty seed remains an initial direct native
+offline-authoring input. These rules apply to the selected published v0.1.1 release.
 
 ## Consumer checks
 

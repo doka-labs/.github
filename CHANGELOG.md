@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Upgrade the paired Sourcefield CLI/browser lock and workflow pins to v0.1.1.
+- Preserve dated observation captures separately from effective offline Preview inputs.
+- Regenerate schema 2 replay records and retain all current historical archives.
+- Cover source/render preservation and corruption with released-generator consumer tests.
+
 - Add NestedSet and the SafeMigrations SQLite adapter to the organization profile.
 - Add the published SafeMigrations SQL Server adapter and its presentation label.
 - Group NuGet packages into three columns and matching managed sections in both READMEs.

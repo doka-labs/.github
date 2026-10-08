@@ -1,5 +1,6 @@
 """Exercise the released CLI at the consumer's authored and generated file boundaries."""
 
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -12,6 +13,14 @@ from test_consumer_contract import APPROVED_PROJECT_LAYOUT, ROOT, SQL_SERVER_PAC
 
 
 READMES = ("README.md", "profile/README.md")
+REPLAY_INPUTS = {
+    "resolved-config.json", "source-snapshot.json", "render-snapshot.json",
+    "import-capture.json", "layout.json", "profile-state.json",
+}
+
+AUTHORED_DRIFT_DIAGNOSTIC = (
+    "generation provenance authored inputs changed: configuration bytes differ from the recorded generation"
+)
 
 
 def read_json(path):
@@ -80,6 +89,19 @@ class ReleasedGenerationTests(unittest.TestCase):
         """Capture every retained archive and the historical index byte for byte."""
         return {path.name: path.read_bytes() for path in (self.root / "docs/history").iterdir() if path.is_file()}
 
+    def _assert_generation_record(self):
+        """Require the schema 2 record to bind current authored bytes and exactly six captured input roles."""
+        record = read_json(self.root / "assets/generation-record.json")
+        inputs = {name: hashlib.sha256((self.root / "assets" / name).read_bytes()).hexdigest()
+                  for name in REPLAY_INPUTS}
+
+        self.assertEqual(record["schema_version"], 2)
+        self.assertEqual(record["inputs"], inputs)
+        self.assertEqual(record["authored_config_sha256"],
+                         hashlib.sha256((self.root / "config/profile.toml").read_bytes()).hexdigest())
+
+        return record
+
     def _change_canonical_summary(self):
         """Edit one real organization project without changing the profile's presentation inputs."""
         path = self.root / "config/organization.toml"
@@ -123,7 +145,7 @@ class ReleasedGenerationTests(unittest.TestCase):
         self.assertIsNone(private["url"])
         for relative in READMES:
             readme = (self.root / relative).read_text(encoding="utf-8")
-            self.assertIn(f"- {private['label']}: {private['summary']}", readme)
+            self.assertIn(f"| {private['label']} | {private['summary']} |", readme)
             self.assertNotIn(f"[{private['label']}]", readme)
 
     def test_shorter_history_is_preserved_without_filling_the_retention_cap(self):
@@ -148,6 +170,64 @@ class ReleasedGenerationTests(unittest.TestCase):
         # Assert
         self.assertEqual(self._history(), history)
         self.assertEqual(read_json(index_path)["states"], retained)
+
+    def test_offline_preview_preserves_dated_source_and_records_distinct_effective_input(self):
+        """Preview preserves the actual public Live capture while binding its separate undated rendering input."""
+        # Arrange
+        source_path = self.root / "assets/source-snapshot.json"
+        source_bytes = source_path.read_bytes()
+        captured = read_json(source_path)
+        history = self._history()
+
+        # Act
+        state = self._generate()
+
+        # Assert
+        self.assertEqual(captured["mode"], "live")
+        self.assertTrue(captured["fetched_at"])
+        self.assertIsNone(captured["private_repository_count"])
+        self.assertEqual(source_path.read_bytes(), source_bytes)
+        current = read_json(source_path)
+        self.assertEqual(current["fetched_at"], captured["fetched_at"])
+        self.assertEqual(current["sources"], captured["sources"])
+        render_path = self.root / "assets/render-snapshot.json"
+        effective = read_json(render_path)
+        self.assertEqual(effective["mode"], "preview")
+        self.assertEqual(effective["fetched_at"], "")
+        self.assertIsNone(effective["private_repository_count"])
+        self.assertEqual(state["mode"], "preview")
+        self.assertNotEqual(render_path.read_bytes(), source_bytes)
+        self._assert_generation_record()
+        self.assertEqual(self._history(), history)
+
+    def test_locked_replay_preserves_dated_source_and_recorded_effective_preview(self):
+        """Replay preserves raw source provenance and the exact already captured Preview without rewriting history."""
+        # Arrange
+        source_path = self.root / "assets/source-snapshot.json"
+        source_bytes = source_path.read_bytes()
+        captured = read_json(source_path)
+        history = self._history()
+        self._generate()
+        render_path = self.root / "assets/render-snapshot.json"
+        render_bytes = render_path.read_bytes()
+        outputs = self._owned_outputs()
+
+        # Act
+        state = self._generate("--locked")
+
+        # Assert
+        self.assertEqual(source_path.read_bytes(), source_bytes)
+        self.assertEqual(read_json(source_path)["fetched_at"], captured["fetched_at"])
+        self.assertEqual(read_json(source_path)["mode"], captured["mode"])
+        self.assertEqual(read_json(source_path)["sources"], captured["sources"])
+        self.assertEqual(render_path.read_bytes(), render_bytes)
+        self.assertEqual(read_json(render_path)["mode"], "preview")
+        self.assertEqual(read_json(render_path)["fetched_at"], "")
+        self.assertIsNone(read_json(render_path)["private_repository_count"])
+        self.assertEqual(state["mode"], "preview")
+        self._assert_generation_record()
+        self.assertEqual(self._owned_outputs(), outputs)
+        self.assertEqual(self._history(), history)
 
     def test_canonical_summary_reaches_state_and_both_readmes_without_moving_projects(self):
         """The local import is the active consumer source of project prose."""
@@ -232,7 +312,7 @@ class ReleasedGenerationTests(unittest.TestCase):
 
         # Assert
         self.assertNotEqual(result.returncode, 0)
-        self.assertIn("locked replay input digest mismatch: source-snapshot.json", result.stderr)
+        self.assertIn("generation provenance input digest mismatch: source-snapshot.json", result.stderr)
         self.assertEqual(self._owned_outputs(), outputs)
 
     def test_changed_profile_rejects_locked_replay_without_mutating_outputs(self):
@@ -248,7 +328,25 @@ class ReleasedGenerationTests(unittest.TestCase):
 
         # Assert
         self.assertNotEqual(result.returncode, 0)
-        self.assertIn("unchanged authored inputs", result.stderr)
+        self.assertIn(AUTHORED_DRIFT_DIAGNOSTIC, result.stderr)
+        self.assertEqual(self._owned_outputs(), outputs)
+
+    def test_corrupt_effective_render_snapshot_fails_replay_without_mutating_outputs(self):
+        """The schema 2 record rejects changed effective rendering bytes independently of the durable source."""
+        # Arrange
+        self._generate()
+        source_bytes = (self.root / "assets/source-snapshot.json").read_bytes()
+        render_path = self.root / "assets/render-snapshot.json"
+        render_path.write_bytes(render_path.read_bytes() + b"\n")
+        outputs = self._owned_outputs()
+
+        # Act
+        result = self._command("--locked")
+
+        # Assert
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("generation provenance input digest mismatch: render-snapshot.json", result.stderr)
+        self.assertEqual((self.root / "assets/source-snapshot.json").read_bytes(), source_bytes)
         self.assertEqual(self._owned_outputs(), outputs)
 
 

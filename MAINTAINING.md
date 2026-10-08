@@ -12,6 +12,11 @@ Approved private summaries must not expose repository URLs or implementation det
 and counts are observed registry data. New publication families need deliberate manifest changes;
 discovery stays inside the configured owner and package-ID prefixes.
 
+A supplied maintainer role must remain nonempty after trimming whitespace. This rule also applies
+to retained archives from older generators: a supplied blank role rejects generation. Omitted
+optional maintainer attribution is valid; supplied attribution requires a nonblank role. Inspect
+history before an upgrade; do not silently rewrite or discard an archive to bypass admission.
+
 Select both `README.md` and `profile/README.md` during generation. Their managed project and package
 sections use complete marker pairs; leave authored text outside those markers intact. Omission of a
 README never authorizes its deletion. Preview in a separate directory using the pinned shared tools
@@ -19,10 +24,26 @@ and matching installation described in [Setup](SETUP.md).
 
 Run consumer checks and inspect generated output and the actual browser. Confirm both themes, static
 rendering, accessible links, mobile layout, retained history, pause, and reduced motion. Offline output
-must retain its offline status. Keep `config/offline-snapshot.json` as an empty, explicitly Preview
-seed required by the released CLI. Default offline preview uses this seed; recorded current observations
-are reproduced with `--offline --locked`, matching retained inputs and generator identity. Strict live
-failures block scheduled publication; investigate source status instead of deleting warnings or treating
+must retain its offline status. The wrapper selects
+`--fallback-snapshot assets/source-snapshot.json` for retained observations and live fallback.
+Offline generation and replay preserve that existing capture byte for byte, including its date,
+source statuses, and approved observations. The separate `assets/render-snapshot.json` records
+effective privacy-filtered input; offline Preview is undated there. Keep both snapshots and the
+matching generation record tracked. A previously approved raw aggregate can remain retained while
+current rendering omits it. Locked replay uses the recorded effective input rather than today's
+credential selection.
+
+Generation-record envelope schema 2 binds six fixed inputs. Only envelope schema 2 is supported.
+Older generator records require regeneration with a matching CLI/runtime pair. Validation
+distinguishes record schema, generator identity, authored-input drift, and capture corruption.
+Regenerate with the matching pair after an implementation upgrade before validating or replaying.
+
+Missing offline/replay observations or required import captures fail without seed substitution.
+A first online refresh may collect without a prior capture or seed; malformed existing captures,
+unsupported snapshot schemas, and filesystem errors remain fatal. `config/offline-snapshot.json`
+remains an initial direct native offline-authoring seed. Offline, no-history, and replay runs retain
+existing archive/index bytes; allowed live generation applies rolling retention. Strict live failures
+block scheduled publication; investigate source status instead of deleting warnings or treating
 fallback observations as current.
 
 ## Generator upgrades
@@ -39,7 +60,10 @@ changes; leave its existing allowed Actions intact. Ordinary content refreshes d
 Shared tooling must come from the selected commit. Runtime files such as `docs/pkg/` and
 `docs/runtime-manifest.json`, installations, caches, and `dist/` remain ignored. The Pages artifact
 includes the complete runtime even though Git does not. Generator, collection, rendering, and runtime
-implementation changes belong in the upstream repository.
+implementation changes belong in the upstream repository. The generator verifies the complete raw
+installed runtime before projecting profile identity, palette, favicon, and page metadata into output.
+The projected manifest updates those output digests while retaining generator identity. Generated
+`docs/` is not a replacement for the raw runtime supplied through `--runtime`.
 
 ## Publication failures
 
@@ -60,10 +84,11 @@ Original working files, matching runtime, and Git history have a separate extern
 `collection.history_limit = 24` governs ongoing rolling retention. It does not retain every historical
 snapshot forever. Keep captured inputs, generation records, and the generated ownership inventory
 tracked so a previous consumer revision and its immutable release can be replayed.
+Restore retained source and effective render snapshots together with their matching generation record.
 
 For interrupted generation, preserve the transaction journal and recovery material and confirm no
 writer remains. Follow the pinned upstream
-[recovery procedure](https://github.com/kdominic89/sourcefield/blob/9c69b59c0d85eb26418fb7c7800be2b54ac55a8b/docs/operations.md#publication-and-interruption),
+[recovery procedure](https://github.com/kdominic89/sourcefield/blob/b12eb4c72d60fbc075776a6ccc4bc15736db28af/docs/operations.md#publication-and-interruption),
 including exact lock-token verification when a lock exists. Restore the complete matching runtime,
 data, and index set. Do not remove a stale lock or mix old executable/new state without diagnosis.
 Actions artifacts are temporary operational copies; retain separate recovery material when required.

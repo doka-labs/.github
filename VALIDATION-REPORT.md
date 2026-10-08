@@ -1,44 +1,48 @@
 # Validation
 
-Verified locally on October 7, 2026 against the published Sourcefield `v0.1.0` CLI and matching
-browser runtime at source commit `9c69b59c0d85eb26418fb7c7800be2b54ac55a8b`. This is consumer
-migration evidence; it does not claim a new GitHub CI run or public deployment.
+Verified locally on October 8, 2026 with the published Sourcefield `v0.1.1` CLI and matching
+browser runtime at source commit `b12eb4c72d60fbc075776a6ccc4bc15736db28af`. The installation
+was authenticated against the immutable release, both archive digests, and GitHub attestations.
+This report records consumer upgrade checks on macOS; it does not claim a hosted consumer run
+or a new public deployment.
 
-## Current candidate
+## Current output
 
-The checked-in current output is explicitly **Preview**, state `550C4EAA33EE3591`, with 21 nodes,
-35 edges, four projects, ten NuGet packages, and a 1800 by 1552 canvas. Public observations were
-collected successfully in an isolated, unpublished Git fixture. Regenerating the consumer from those
-observations offline retains honest Preview status and does not claim published import provenance.
-The minimal tracked Preview seed contains no maintained package versions or fabricated metrics.
+The regenerated output is explicitly **Preview**, state `D339988187297421`, with 21 nodes,
+35 edges, four projects, ten NuGet packages, and a 1800 by 1552 canvas. It uses the latest
+published consumer inputs from commit `10a7ab01bead284d6d03a2eb24d7ac41dea2475f`.
 
-The approved project/domain/publication positions, nine original package anchors, project radii,
-and weights are preserved. SQL Server occupies the fifth SafeMigrations row. The added row grows the
-canvas by 90 units; the footer separator remains 64 units below the last package version line.
-Derived technology positions use the released stable-ID layout; those nodes are not drawn in the
-README or browser Field SVG.
+The retained `assets/source-snapshot.json` is byte-identical to that published input. Its original
+Live status and collection date, `2026-10-07T10:18:38.951719124+00:00`, remain intact. Offline
+generation performs no new collection. Its separate `assets/render-snapshot.json` is an undated
+Preview, and the schema 2 generation record binds exactly six captured inputs and the authored
+profile digest. Versions and metrics in this preview are retained observations, not new queries.
+
+The authored configuration, approved geometry, safe motif, SQL Server fifth package row,
+maintainer attribution, and collection scope remain unchanged. All 24 retained archive files and
+their index remain byte-identical. Both READMEs receive the same generated project/package tables;
+their authored prose and destination links are preserved.
 
 ## Executed checks
 
 | Check | Result |
 | --- | --- |
-| Published lock, release signatures/attestations, native and browser archive digests | Passed |
-| Released migration/recovery mapping | All 52 mapped source/recovery/output file digests match |
-| Historical archive migration | All 24 original archive facts, hashes, and timestamps retained |
-| Consumer Python tests with `SOURCEFIELD_INSTALLATION` | 12 passed; positive/negative generation, replay, atomicity, layout, privacy, and shorter-history coverage |
-| Shared pin check and artifact validator | Passed; 21 nodes, 35 edges, ten packages, zero warnings |
-| Both workflow files with `actionlint` | Passed |
-| Released runtime in actual Chromium | Passed; approved safe icon, WASM, fallback, field geometry, interaction, pause, and reduced motion |
-| Actual migrated browser history | All 24 archives load; node counts match; current view restores |
-| README/mobile SVG comparison | Captured and inspected at 820 and 343 content pixels before/after |
-| Fresh tracked checkout through shared candidate tooling | Passed without Rust compilation; matching ignored WASM/runtime restored |
-| Locked candidate from fresh checkout | Current state, all three SVGs, and history index reproduce byte for byte |
-| Actual strict live rolling retention in isolated fixture | Passed; new live archive prepended, oldest removed, 24 retained |
-| Offline history boundary | Existing live archives remain unchanged; previews create no live archive |
-| Full recovery rehearsal | All 87 original working/runtime files restore with matching digests; full Git bundle verifies |
-| Documentation, local references, pins, and ASCII checks | Passed |
+| Published release, native/browser archives, checksums, and attestations | Passed; authenticated matching v0.1.1 installation |
+| Consumer tests with the released installation | 15 passed, zero skipped; authored contracts and positive/negative generation, replay, privacy, geometry, history, and atomicity |
+| Lock, update-workflow pin, and shared tooling revision | Passed; all select the released source commit |
+| Complete generated artifact validation | Passed; 21 nodes, 35 edges, ten packages, matching WASM/runtime |
+| Both workflow files with actionlint | Passed |
+| Actual released runtime in Chromium | Passed; WASM, fallback, themes, geometry, interaction, pause, and reduced motion |
+| Historical browser selection | All 24 archives load with matching node counts; current view restores |
+| README/mobile comparison | Before/after SVGs inspected at 820 and 343 content pixels |
+| Locked native replay | All candidate files reproduce byte for byte |
+| Missing retained offline capture | Fails without changing other files or substituting the authoring seed |
+| Retained capture without the authoring seed | Generation succeeds and retains the expected source and current state |
+| Two fresh Git clones through shared candidate/publication tools | Passed; raw capture and all archives preserved, ignored WASM regenerated and never staged |
+| Recovery and source preservation | Original and published trees retained externally; Git bundles verify; other consumer and generator files unchanged |
+| Documentation, references, ASCII, Python syntax, and final candidate digests | Passed |
 
-Representative commands actually run against isolated fixtures:
+Representative commands actually run, with external paths abbreviated:
 
 ```sh
 SOURCEFIELD_INSTALLATION=/path/to/verified/installation \
@@ -46,7 +50,7 @@ SOURCEFIELD_INSTALLATION=/path/to/verified/installation \
 
 python3 -B "$SOURCEFIELD_SOURCE/scripts/check_pin.py" \
   --lock sourcefield.lock.json --workflow .github/workflows/update-profile.yml \
-  --own-commit 9c69b59c0d85eb26418fb7c7800be2b54ac55a8b
+  --own-commit b12eb4c72d60fbc075776a6ccc4bc15736db28af
 
 python3 -B "$SOURCEFIELD_SOURCE/scripts/validate_artifact.py" \
   --root /path/to/verified/candidate --workflow-root /path/to/consumer --require-wasm
@@ -59,15 +63,15 @@ node "$SOURCEFIELD_SOURCE/scripts/verify-browser.mjs" \
   --browser /path/to/existing/chromium
 ```
 
-The paths above represent the actual external installation and isolated candidate used for these
-checks. The consumer carries neither a Rust workspace nor copied generator/browser test tooling.
-Detailed logs, original bytes, digests, migration mappings, and screenshots are retained separately.
+Detailed logs, recovery files, digests, publication fixtures, and comparison screenshots are
+retained outside this repository. Neither compiled binaries nor browser test tooling are tracked.
 
 ## Publication boundary
 
-The repository Actions allowlist was verified on October 7, 2026 to include the exact pinned
-Sourcefield reusable workflow listed in [Setup](SETUP.md); existing policy settings were unchanged.
-The user added the entry, and the agent verified it through the GitHub API. Hosted Actions,
-repository publication, Pages deployment, and the served public page require verification after the
-reviewed change is pushed. Local tests do not establish hosted success. macOS execution
-is verified here; this consumer's new workflow has not yet executed on its Ubuntu runner.
+The user updated the repository Actions allowlist, and its exact new reusable workflow entry was
+verified through the GitHub API on October 8, 2026; see [Setup](SETUP.md). Existing permissions,
+schedule, checked publication, and deployment ordering remain unchanged.
+
+Commit, push, hosted validation, and the subsequent Update SOURCEFIELD publication/Pages run
+remain separate steps. Local checks do not establish hosted success. The immutable upstream
+release passed its own CI; this consumer's upgraded workflow still needs its hosted Ubuntu run.

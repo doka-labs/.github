@@ -3,7 +3,7 @@
 This repository is the configuration and public output consumer for the doka-labs organization
 profile. Sourcefield owns generation and the browser runtime in
 [kdominic89/sourcefield](https://github.com/kdominic89/sourcefield). The consumer selects immutable
-release `v0.1.0`, source commit `9c69b59c0d85eb26418fb7c7800be2b54ac55a8b`.
+release `v0.1.1`, source commit `b12eb4c72d60fbc075776a6ccc4bc15736db28af`.
 
 ## Ownership
 
@@ -41,16 +41,25 @@ files and the selected README sections against the expected source HEAD. Reposit
 succeed before the dependent Pages deployment. An obsolete source revision or failed push stops deployment.
 
 The browser runtime, including `docs/pkg/` and `docs/runtime-manifest.json`, is supplied by the
-release and included in the complete Pages artifact. Runtime files, local caches, and `dist/` remain
+release and included in the complete Pages artifact. Generation verifies the raw installed runtime
+before projecting organization identity into site metadata and updating the projected manifest.
+Generated `docs/` is output, not a substitute for the installed raw runtime. Runtime files, local caches, and `dist/` remain
 ignored by Git. This repository contains no copied Rust workspace or runtime build pipeline.
 
 ## State and recovery
 
-Captured observations retain source status and timestamps. Default offline generation uses the
-explicitly Preview seed in `config/offline-snapshot.json`, which contains no invented observations.
-Use `--offline --locked` for replay of recorded resolved inputs and observations with their matching
-generator identity. Preview and fallback data must not be relabeled as live. Required inputs and
-imports must exist; generation does not invent missing historical facts.
+The consumer wrapper selects `assets/source-snapshot.json` as retained observation input.
+Offline generation and locked replay preserve its exact bytes, original date, and source statuses.
+The separate `assets/render-snapshot.json` records the effective input: an offline Preview is undated,
+while the retained Live capture keeps its actual date. A generation-record schema 2 envelope binds
+six captured inputs and the exact authored configuration and generator identity. Regenerate with the
+matched release pair after an upgrade; older generator records cannot be replayed by the new pair.
+
+Offline updates require the retained observation capture; they do not substitute the empty native
+first-authoring seed. A first online refresh may collect without a prior capture or seed. Malformed
+existing captures, missing required imports, and strict collection failures prevent publication.
+Preview and fallback data must not be relabeled as live. Offline, replay, and no-history generation
+retain the existing archive/index bytes; successful live refresh applies rolling retention.
 
 Migration converts retained legacy state and archives to schema 3 while preserving their facts
 and timestamps. A complete original recovery copy is kept outside the repository. The configured
