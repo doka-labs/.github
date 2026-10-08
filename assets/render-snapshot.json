@@ -3,59 +3,59 @@
   "sources": [
     {
       "source": "github:org:doka-labs",
-      "status": "preview"
+      "status": "live"
     },
     {
       "source": "github:repositories:doka-labs",
-      "status": "preview"
+      "status": "live"
     },
     {
       "source": "nuget:doka.caching.mysql",
-      "status": "preview"
+      "status": "live"
     },
     {
       "source": "nuget:doka.entityframeworkcore.mysql",
-      "status": "preview"
+      "status": "live"
     },
     {
       "source": "nuget:doka.entityframeworkcore.mysql.nettopologysuite",
-      "status": "preview"
+      "status": "live"
     },
     {
       "source": "nuget:doka.entityframeworkcore.nestedset",
-      "status": "preview"
+      "status": "live"
     },
     {
       "source": "nuget:doka.entityframeworkcore.safemigrations",
-      "status": "preview"
+      "status": "live"
     },
     {
       "source": "nuget:doka.entityframeworkcore.safemigrations.mysql",
-      "status": "preview"
+      "status": "live"
     },
     {
       "source": "nuget:doka.entityframeworkcore.safemigrations.postgresql",
-      "status": "preview"
+      "status": "live"
     },
     {
       "source": "nuget:doka.entityframeworkcore.safemigrations.sqlite",
-      "status": "preview"
+      "status": "live"
     },
     {
       "source": "nuget:doka.entityframeworkcore.safemigrations.sqlserver",
-      "status": "preview"
+      "status": "live"
     },
     {
       "source": "nuget:doka.nestedset",
-      "status": "preview"
+      "status": "live"
     },
     {
       "source": "nuget:owner:doka-labs",
-      "status": "preview"
+      "status": "live"
     }
   ],
-  "mode": "preview",
-  "fetched_at": "",
+  "mode": "live",
+  "fetched_at": "2026-10-08T10:01:15.978977687+00:00",
   "user": {
     "login": "",
     "display_name": null,
@@ -85,7 +85,7 @@
       "forks": 0,
       "archived": false,
       "fork": false,
-      "pushed_at": "2026-10-07T09:50:11Z"
+      "pushed_at": "2026-10-08T09:59:52Z"
     },
     {
       "owner": "doka-labs",
@@ -149,7 +149,7 @@
       "forks": 0,
       "archived": false,
       "fork": false,
-      "pushed_at": "2026-10-02T05:13:26Z"
+      "pushed_at": "2026-10-07T23:10:28Z"
     },
     {
       "owner": "doka-labs",
@@ -176,7 +176,7 @@
       "forks": 0,
       "archived": false,
       "fork": false,
-      "pushed_at": "2026-10-06T19:07:42Z"
+      "pushed_at": "2026-10-08T09:43:09Z"
     }
   ],
   "contributions": null,
