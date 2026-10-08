@@ -1,15 +1,15 @@
 {
   "schema_version": 2,
-  "generator_version": "0.1.1",
-  "source_revision": "b12eb4c72d60fbc075776a6ccc4bc15736db28af",
-  "generator_fingerprint": "56d3b9d25c2f7f9a156144a41db8b65b27f4355b5b779d11ff35f66e38693cfe",
+  "generator_version": "0.1.2",
+  "source_revision": "cd2e2b6779c82a3f64346a47d40da4967fcc0dc5",
+  "generator_fingerprint": "da6f913896a6e00f35d0bbf1d1479a82ebbca9c85b082c2628278c2449baa467",
   "authored_config_sha256": "ba2ae3e58bdb93a1a3f9c3883d4c2cf1d7008c70a5087826d31609bdd178a2c6",
   "inputs": {
-    "import-capture.json": "708b73f13d655a70fe4e6c0e3378a836aeaedc38469c8fbef8ebcc89809dba20",
+    "import-capture.json": "2c992857f7589a4ec1f625fe4c11ca3a54d8b9ce833a02addd272a4a1070bb82",
     "layout.json": "34a329ca11b5fa52b099a57e1a15c04b304ef4d9a8871ddf584f9a25fd4e2bcf",
-    "profile-state.json": "3c6bad4bc392043edd65ac8f8844bbcc7a21ddfb4fc6f5ff3738fe3596c3256e",
-    "render-snapshot.json": "1196d990af89e69bd382c671f3b9f8322eee2172c503a60be13799eb4f13ed76",
-    "resolved-config.json": "90b6986a0715afe12119398fd94437552be6c0da1e2efbc40310f25a711ec10e",
+    "profile-state.json": "f39e0ab37902a4f6e385002ba6013e132cac77253cfe170cc0f20a710907b5ca",
+    "render-snapshot.json": "f3dc51ccf95c098b201d5831b84b83c8a96b54751e9645e24059d641d3ba234e",
+    "resolved-config.json": "c4bbea583c0c6fe7f33146f44497f7170a77a721c02b4cae7c4b1340fec58719",
     "source-snapshot.json": "1196d990af89e69bd382c671f3b9f8322eee2172c503a60be13799eb4f13ed76"
   }
 }

@@ -5,6 +5,7 @@ id = "doka-labs"
 owner = "doka-labs"
 label = "doka-labs"
 summary = "Public and private projects."
+repository_caption = { source = "selected-projects" }
 
 [maintainer]
 username = "kdominic89"

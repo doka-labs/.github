@@ -13,17 +13,17 @@ Actions and repository publication permissions. In **Settings > Actions > Genera
 existing selected-actions policy, including this exact reusable workflow entry:
 
 ```text
-kdominic89/sourcefield/.github/workflows/generate.yml@b12eb4c72d60fbc075776a6ccc4bc15736db28af
+kdominic89/sourcefield/.github/workflows/generate.yml@cd2e2b6779c82a3f64346a47d40da4967fcc0dc5
 ```
 
-The repository allowlist was verified on October 8, 2026 to include this entry. The rule authorizes
+The repository allowlist was verified on October 9, 2026 to include this entry. The rule authorizes
 only this workflow at this commit; it does not change other repositories or allow every external
 action. See
 [GitHub's documented workflow allowlist syntax](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#allowing-select-actions-and-reusable-workflows-to-run).
 
 The update workflow supports manual dispatch and the daily cron `17 3 * * *` (03:17 UTC).
 It calls Sourcefield's read-only reusable generator at
-`b12eb4c72d60fbc075776a6ccc4bc15736db28af`, matching `sourcefield.lock.json`. Strict live collection
+`cd2e2b6779c82a3f64346a47d40da4967fcc0dc5`, matching `sourcefield.lock.json`. Strict live collection
 must succeed before publication. The caller uploads the complete candidate Pages artifact, checks
 the expected repository HEAD, publishes only owned output and selected READMEs, and then deploys.
 A push or pull request runs a read-only validation job using shared tooling from the same source SHA:
@@ -38,7 +38,7 @@ after repository publication, retry deployment of that same saved artifact.
 ## Optional local preview
 
 Local preview uses Python 3.11+ and shared tooling from a Sourcefield checkout at exactly
-`b12eb4c72d60fbc075776a6ccc4bc15736db28af`. Confirm that checkout with `git rev-parse HEAD` before
+`cd2e2b6779c82a3f64346a47d40da4967fcc0dc5`. Confirm that checkout with `git rev-parse HEAD` before
 using its scripts. A shared installation must contain the verified native CLI and matching browser
 runtime selected by this consumer's lock. Reuse that installation across consumers; no per-repository
 manual installation or Rust build is needed.
@@ -49,7 +49,7 @@ network access and suitable read authentication:
 
 ```sh
 SOURCEFIELD_SOURCE=/path/to/pinned/sourcefield
-export SOURCEFIELD_INSTALLATION=/path/to/shared/sourcefield-v0.1.1
+export SOURCEFIELD_INSTALLATION=/path/to/shared/sourcefield-v0.1.2
 CONSUMER_REPOSITORY=/path/to/doka-labs
 
 python3 -B "$SOURCEFIELD_SOURCE/scripts/bootstrap_release.py" \
@@ -59,7 +59,7 @@ python3 -B "$SOURCEFIELD_SOURCE/scripts/bootstrap_release.py" \
 
 Keep existing installations intact. The bootstrap verifies the immutable release, archive digests,
 and attestations before publishing a matched CLI/runtime pair. See the pinned upstream
-[installation contract](https://github.com/kdominic89/sourcefield/blob/b12eb4c72d60fbc075776a6ccc4bc15736db28af/docs/distribution.md#verified-installation).
+[installation contract](https://github.com/kdominic89/sourcefield/blob/cd2e2b6779c82a3f64346a47d40da4967fcc0dc5/docs/distribution.md#verified-installation).
 
 Check the consumer pin, then generate into a new external directory:
 
@@ -99,7 +99,7 @@ Omit `--offline` for a strict online refresh. Its first run can collect without 
 filesystem errors remain fatal; strict incomplete or failed collection leaves output unchanged.
 Without a usable dated prior capture,
 collection failure cannot succeed through fallback. The empty seed remains an initial direct native
-offline-authoring input. These rules apply to the selected published v0.1.1 release.
+offline-authoring input. These rules apply to the selected published v0.1.2 release.
 
 ## Consumer checks
 

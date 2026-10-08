@@ -158,6 +158,13 @@
   },
   "domains": [
     {
+      "repository_caption": {
+        "source": "selected-projects",
+        "public_label": "public",
+        "private_label": "private",
+        "suffix": "repos",
+        "unavailable": "repos unavailable"
+      },
       "maintainer": {
         "username": "kdominic89",
         "role": "Administrator & Core Maintainer",

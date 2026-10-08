@@ -46,6 +46,15 @@ existing archive/index bytes; allowed live generation applies rolling retention.
 block scheduled publication; investigate source status instead of deleting warnings or treating
 fallback observations as current.
 
+## Repository caption
+
+The canonical manifest owns `repository_caption = { source = "selected-projects" }`.
+The organization hub shows `3 public / 1 private repos` in SVG text and its accessible label.
+This counts the four curated projects, including the private, unlinked RelationalLab; it is not
+an account inventory and needs no token for private repositories. Both profiles import this
+same caption setting. Labels and the suffix can be edited in the manifest without another
+Sourcefield release once all importers support the field.
+
 ## Generator upgrades
 
 The root `sourcefield.lock.json`, update workflow's reusable reference, and validation workflow's shared
@@ -56,6 +65,16 @@ lock/update-workflow change in a new external review directory. Inspect both fil
 tooling checkout and identity-check argument, then verify consumer candidates before adoption.
 Update the exact reusable-workflow allowlist entry in this repository when the reviewed source SHA
 changes; leave its existing allowed Actions intact. Ordinary content refreshes do not upgrade the generator.
+
+Upgrade every importer before publishing a newly supported field in the canonical manifest.
+The personal profile currently imports this repository's `main`; its `v0.1.1` generator cannot
+read `repository_caption`. Publish its upgrade to `v0.1.2` before publishing this manifest.
+Existing captures remain usable during that first upgrade. Subsequent caption edits need only
+a normal profile refresh in each consumer, with no release or pin change.
+
+A rollback to `v0.1.1` must restore the compatible manifest, captures, generated state, ownership,
+and release pins together. That version rejects caption fields in configuration and states;
+do not replay caption-bearing input or archives with the older executable.
 
 Shared tooling must come from the selected commit. Runtime files such as `docs/pkg/` and
 `docs/runtime-manifest.json`, installations, caches, and `dist/` remain ignored. The Pages artifact
@@ -88,7 +107,7 @@ Restore retained source and effective render snapshots together with their match
 
 For interrupted generation, preserve the transaction journal and recovery material and confirm no
 writer remains. Follow the pinned upstream
-[recovery procedure](https://github.com/kdominic89/sourcefield/blob/b12eb4c72d60fbc075776a6ccc4bc15736db28af/docs/operations.md#publication-and-interruption),
+[recovery procedure](https://github.com/kdominic89/sourcefield/blob/cd2e2b6779c82a3f64346a47d40da4967fcc0dc5/docs/operations.md#publication-and-interruption),
 including exact lock-token verification when a lock exists. Restore the complete matching runtime,
 data, and index set. Do not remove a stale lock or mix old executable/new state without diagnosis.
 Actions artifacts are temporary operational copies; retain separate recovery material when required.
