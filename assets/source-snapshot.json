@@ -55,7 +55,7 @@
     }
   ],
   "mode": "live",
-  "fetched_at": "2026-10-09T10:37:06.882635545+00:00",
+  "fetched_at": "2026-10-09T16:40:51.709224727+00:00",
   "user": {
     "login": "",
     "display_name": null,
@@ -85,7 +85,7 @@
       "forks": 0,
       "archived": false,
       "fork": false,
-      "pushed_at": "2026-10-08T23:34:59Z"
+      "pushed_at": "2026-10-09T10:37:24Z"
     },
     {
       "owner": "doka-labs",
@@ -149,7 +149,7 @@
       "forks": 0,
       "archived": false,
       "fork": false,
-      "pushed_at": "2026-10-09T09:34:40Z"
+      "pushed_at": "2026-10-09T16:29:08Z"
     },
     {
       "owner": "doka-labs",
@@ -209,7 +209,7 @@
     {
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.NestedSet",
-      "version": "10.0.0-rc.1",
+      "version": "10.0.0",
       "total_downloads": 0,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.NestedSet/"
@@ -257,7 +257,7 @@
     {
       "owner": "doka-labs",
       "id": "Doka.NestedSet",
-      "version": "10.0.0-rc.1",
+      "version": "10.0.0",
       "total_downloads": 0,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.NestedSet/"

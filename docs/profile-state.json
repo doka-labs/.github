@@ -87,8 +87,8 @@
   ],
   "schema_version": 3,
   "mode": "live",
-  "generated_at": "2026-10-09T10:37:08.621969609+00:00",
-  "semantic_hash": "BA9F59E114CABB04",
+  "generated_at": "2026-10-09T16:40:53.062727850+00:00",
+  "semantic_hash": "307503C27613C3B7",
   "canvas": {
     "show_activity_orbit": true,
     "show_state_hash": false,
@@ -412,7 +412,7 @@
       "summary": "Ordered hierarchies, queries, and mutations",
       "details": [
         "Family: hierarchy",
-        "Observed version: 10.0.0-rc.1",
+        "Observed version: 10.0.0",
         "Downloads: 0"
       ],
       "tags": [
@@ -441,7 +441,7 @@
       "summary": "EF-independent node and bounds contracts",
       "details": [
         "Family: hierarchy",
-        "Observed version: 10.0.0-rc.1",
+        "Observed version: 10.0.0",
         "Downloads: 0"
       ],
       "tags": [
@@ -985,7 +985,7 @@
     {
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.NestedSet",
-      "version": "10.0.0-rc.1",
+      "version": "10.0.0",
       "total_downloads": 0,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.NestedSet/"
@@ -1033,7 +1033,7 @@
     {
       "owner": "doka-labs",
       "id": "Doka.NestedSet",
-      "version": "10.0.0-rc.1",
+      "version": "10.0.0",
       "total_downloads": 0,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.NestedSet/"
