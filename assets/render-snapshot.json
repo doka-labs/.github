@@ -55,7 +55,7 @@
     }
   ],
   "mode": "live",
-  "fetched_at": "2026-10-11T10:02:58.242778329+00:00",
+  "fetched_at": "2026-10-12T10:54:07.885230525+00:00",
   "user": {
     "login": "",
     "display_name": null,
@@ -85,7 +85,7 @@
       "forks": 0,
       "archived": false,
       "fork": false,
-      "pushed_at": "2026-10-10T09:53:44Z"
+      "pushed_at": "2026-10-11T10:03:10Z"
     },
     {
       "owner": "doka-labs",
@@ -116,7 +116,7 @@
         "spatial",
         "temporal-tables"
       ],
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "archived": false,
       "fork": false,
