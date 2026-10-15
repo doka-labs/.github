@@ -87,8 +87,8 @@
   ],
   "schema_version": 3,
   "mode": "live",
-  "generated_at": "2026-10-14T08:45:52.484746379+00:00",
-  "semantic_hash": "B5CC441ACB5BA103",
+  "generated_at": "2026-10-15T08:20:23.496047434+00:00",
+  "semantic_hash": "76371A91FE525EFA",
   "canvas": {
     "show_activity_orbit": true,
     "show_state_hash": false,
@@ -298,7 +298,7 @@
       "summary": "Distributed caching with MySQL",
       "details": [
         "Family: cache",
-        "Observed version: 10.4.4",
+        "Observed version: 10.5.0",
         "Downloads: 1561"
       ],
       "tags": [
@@ -327,7 +327,7 @@
       "summary": "EF Core provider for MySQL and MariaDB",
       "details": [
         "Family: provider",
-        "Observed version: 10.4.4",
+        "Observed version: 10.5.0",
         "Downloads: 3668"
       ],
       "tags": [
@@ -356,7 +356,7 @@
       "summary": "Spatial support",
       "details": [
         "Family: spatial",
-        "Observed version: 10.4.4",
+        "Observed version: 10.5.0",
         "Downloads: 2330"
       ],
       "tags": [
@@ -500,7 +500,7 @@
       "summary": "Core package",
       "details": [
         "Family: migrations",
-        "Observed version: 10.4.10",
+        "Observed version: 10.4.11",
         "Downloads: 2364"
       ],
       "tags": [
@@ -529,7 +529,7 @@
       "summary": "MySQL and MariaDB adapter",
       "details": [
         "Family: migrations",
-        "Observed version: 10.4.10",
+        "Observed version: 10.4.11",
         "Downloads: 1997"
       ],
       "tags": [
@@ -558,7 +558,7 @@
       "summary": "PostgreSQL adapter",
       "details": [
         "Family: migrations",
-        "Observed version: 10.4.10",
+        "Observed version: 10.4.11",
         "Downloads: 1680"
       ],
       "tags": [
@@ -587,7 +587,7 @@
       "summary": "SQL Server adapter",
       "details": [
         "Family: migrations",
-        "Observed version: 10.4.10",
+        "Observed version: 10.4.11",
         "Downloads: 0"
       ],
       "tags": [
@@ -616,7 +616,7 @@
       "summary": "SQLite adapter",
       "details": [
         "Family: migrations",
-        "Observed version: 10.4.10",
+        "Observed version: 10.4.11",
         "Downloads: 180"
       ],
       "tags": [
@@ -961,7 +961,7 @@
     {
       "owner": "doka-labs",
       "id": "Doka.Caching.MySql",
-      "version": "10.4.4",
+      "version": "10.5.0",
       "total_downloads": 1561,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.Caching.MySql/"
@@ -969,7 +969,7 @@
     {
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.MySql",
-      "version": "10.4.4",
+      "version": "10.5.0",
       "total_downloads": 3668,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql/"
@@ -977,7 +977,7 @@
     {
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.MySql.NetTopologySuite",
-      "version": "10.4.4",
+      "version": "10.5.0",
       "total_downloads": 2330,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql.NetTopologySuite/"
@@ -993,7 +993,7 @@
     {
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.SafeMigrations",
-      "version": "10.4.10",
+      "version": "10.4.11",
       "total_downloads": 2364,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations/"
@@ -1001,7 +1001,7 @@
     {
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.SafeMigrations.MySql",
-      "version": "10.4.10",
+      "version": "10.4.11",
       "total_downloads": 1997,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.MySql/"
@@ -1009,7 +1009,7 @@
     {
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.SafeMigrations.PostgreSql",
-      "version": "10.4.10",
+      "version": "10.4.11",
       "total_downloads": 1680,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.PostgreSql/"
@@ -1017,7 +1017,7 @@
     {
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.SafeMigrations.SqlServer",
-      "version": "10.4.10",
+      "version": "10.4.11",
       "total_downloads": 0,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.SqlServer/"
@@ -1025,7 +1025,7 @@
     {
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.SafeMigrations.Sqlite",
-      "version": "10.4.10",
+      "version": "10.4.11",
       "total_downloads": 180,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.Sqlite/"
