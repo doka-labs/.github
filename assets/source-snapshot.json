@@ -55,7 +55,7 @@
     }
   ],
   "mode": "live",
-  "fetched_at": "2026-10-19T08:56:23.006901771+00:00",
+  "fetched_at": "2026-10-20T08:35:31.275616612+00:00",
   "user": {
     "login": "",
     "display_name": null,
@@ -85,7 +85,7 @@
       "forks": 0,
       "archived": false,
       "fork": false,
-      "pushed_at": "2026-10-18T08:04:24Z"
+      "pushed_at": "2026-10-19T08:56:35Z"
     },
     {
       "owner": "doka-labs",
@@ -120,7 +120,7 @@
       "forks": 0,
       "archived": false,
       "fork": false,
-      "pushed_at": "2026-10-19T04:25:37Z"
+      "pushed_at": "2026-10-20T08:22:31Z"
     },
     {
       "owner": "doka-labs",
@@ -185,7 +185,7 @@
     {
       "owner": "doka-labs",
       "id": "Doka.Caching.MySql",
-      "version": "10.5.0",
+      "version": "10.6.0",
       "total_downloads": 1561,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.Caching.MySql/"
@@ -193,7 +193,7 @@
     {
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.MySql",
-      "version": "10.5.0",
+      "version": "10.6.0",
       "total_downloads": 3668,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql/"
@@ -201,7 +201,7 @@
     {
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.MySql.NetTopologySuite",
-      "version": "10.5.0",
+      "version": "10.6.0",
       "total_downloads": 2330,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql.NetTopologySuite/"
