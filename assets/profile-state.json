@@ -87,8 +87,8 @@
   ],
   "schema_version": 3,
   "mode": "live",
-  "generated_at": "2026-10-23T08:35:10.353511942+00:00",
-  "semantic_hash": "B11884DCC43139A0",
+  "generated_at": "2026-10-24T08:10:15.150619541+00:00",
+  "semantic_hash": "189180D5202AC86D",
   "canvas": {
     "show_activity_orbit": true,
     "show_state_hash": false,
@@ -119,7 +119,7 @@
     "organization_public_repositories": 4,
     "followers": null,
     "package_count": 10,
-    "package_downloads": 24320,
+    "package_downloads": 24518,
     "contribution_total": null,
     "private_repository_count": null
   },
@@ -299,7 +299,7 @@
       "details": [
         "Family: cache",
         "Observed version: 10.6.1",
-        "Downloads: 2490"
+        "Downloads: 2511"
       ],
       "tags": [
         "nuget",
@@ -328,7 +328,7 @@
       "details": [
         "Family: provider",
         "Observed version: 10.6.1",
-        "Downloads: 5891"
+        "Downloads: 5960"
       ],
       "tags": [
         "nuget",
@@ -357,7 +357,7 @@
       "details": [
         "Family: spatial",
         "Observed version: 10.6.1",
-        "Downloads: 2970"
+        "Downloads: 2988"
       ],
       "tags": [
         "nuget",
@@ -442,7 +442,7 @@
       "details": [
         "Family: hierarchy",
         "Observed version: 10.0.0",
-        "Downloads: 174"
+        "Downloads: 177"
       ],
       "tags": [
         "nuget",
@@ -501,7 +501,7 @@
       "details": [
         "Family: migrations",
         "Observed version: 10.5.0",
-        "Downloads: 4308"
+        "Downloads: 4330"
       ],
       "tags": [
         "nuget",
@@ -530,7 +530,7 @@
       "details": [
         "Family: migrations",
         "Observed version: 10.5.0",
-        "Downloads: 3674"
+        "Downloads: 3700"
       ],
       "tags": [
         "nuget",
@@ -559,7 +559,7 @@
       "details": [
         "Family: migrations",
         "Observed version: 10.5.0",
-        "Downloads: 2800"
+        "Downloads: 2824"
       ],
       "tags": [
         "nuget",
@@ -588,7 +588,7 @@
       "details": [
         "Family: migrations",
         "Observed version: 10.5.0",
-        "Downloads: 713"
+        "Downloads: 719"
       ],
       "tags": [
         "nuget",
@@ -617,7 +617,7 @@
       "details": [
         "Family: migrations",
         "Observed version: 10.5.0",
-        "Downloads: 1140"
+        "Downloads: 1149"
       ],
       "tags": [
         "nuget",
@@ -962,7 +962,7 @@
       "owner": "doka-labs",
       "id": "Doka.Caching.MySql",
       "version": "10.6.1",
-      "total_downloads": 2490,
+      "total_downloads": 2511,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.Caching.MySql/"
     },
@@ -970,7 +970,7 @@
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.MySql",
       "version": "10.6.1",
-      "total_downloads": 5891,
+      "total_downloads": 5960,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql/"
     },
@@ -978,7 +978,7 @@
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.MySql.NetTopologySuite",
       "version": "10.6.1",
-      "total_downloads": 2970,
+      "total_downloads": 2988,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.MySql.NetTopologySuite/"
     },
@@ -994,7 +994,7 @@
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.SafeMigrations",
       "version": "10.5.0",
-      "total_downloads": 4308,
+      "total_downloads": 4330,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations/"
     },
@@ -1002,7 +1002,7 @@
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.SafeMigrations.MySql",
       "version": "10.5.0",
-      "total_downloads": 3674,
+      "total_downloads": 3700,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.MySql/"
     },
@@ -1010,7 +1010,7 @@
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.SafeMigrations.PostgreSql",
       "version": "10.5.0",
-      "total_downloads": 2800,
+      "total_downloads": 2824,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.PostgreSql/"
     },
@@ -1018,7 +1018,7 @@
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.SafeMigrations.SqlServer",
       "version": "10.5.0",
-      "total_downloads": 713,
+      "total_downloads": 719,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.SqlServer/"
     },
@@ -1026,7 +1026,7 @@
       "owner": "doka-labs",
       "id": "Doka.EntityFrameworkCore.SafeMigrations.Sqlite",
       "version": "10.5.0",
-      "total_downloads": 1140,
+      "total_downloads": 1149,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.EntityFrameworkCore.SafeMigrations.Sqlite/"
     },
@@ -1034,7 +1034,7 @@
       "owner": "doka-labs",
       "id": "Doka.NestedSet",
       "version": "10.0.0",
-      "total_downloads": 174,
+      "total_downloads": 177,
       "updated_at": null,
       "url": "https://www.nuget.org/packages/Doka.NestedSet/"
     }
