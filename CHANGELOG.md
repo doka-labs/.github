@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+- Adopt the authenticated Sourcefield v0.1.3 CLI/browser pair and matching workflow pins.
+- Align active release documentation and verify the upgrade in an isolated candidate.
+- Preserve published output until the next strict live refresh with the new release.
+
+## Previous profile updates
+
+- Adopt Sourcefield v0.1.2 and canonical selected-project repository captions.
 - Upgrade the paired Sourcefield CLI/browser lock and workflow pins to v0.1.1.
 - Preserve dated observation captures separately from effective offline Preview inputs.
 - Regenerate schema 2 replay records and retain all current historical archives.

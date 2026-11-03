@@ -6,7 +6,7 @@ artifacts. Captured inputs, generation records, generated ownership inventory, a
 support reproducible output. The generator's Rust workspace and implementation/build scripts belong
 in the upstream Sourcefield repository.
 
-The selected release `v0.1.1` at `b12eb4c72d60fbc075776a6ccc4bc15736db28af` supplies a verified native
+The selected release `v0.1.3` at `ef93cf245ab5dd510132e61ec3cfce64ffafa17a` supplies a verified native
 CLI and matching complete browser runtime. A shared installation can serve multiple consumers.
 The lock records archive identities and digests; see [Setup](SETUP.md) and [Action pins](ACTION-PINS.md).
 

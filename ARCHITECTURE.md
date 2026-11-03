@@ -3,7 +3,7 @@
 This repository is the configuration and public output consumer for the doka-labs organization
 profile. Sourcefield owns generation and the browser runtime in
 [kdominic89/sourcefield](https://github.com/kdominic89/sourcefield). The consumer selects immutable
-release `v0.1.1`, source commit `b12eb4c72d60fbc075776a6ccc4bc15736db28af`.
+release `v0.1.3`, source commit `ef93cf245ab5dd510132e61ec3cfce64ffafa17a`.
 
 ## Ownership
 
