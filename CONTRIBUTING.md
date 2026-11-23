@@ -5,12 +5,13 @@ repository with its own `CONTRIBUTING.md` adds its prerequisites, build and
 test commands, required checks, and product rules there and follows this guide
 for everything else.
 
-Participation follows the [Code of Conduct](CODE_OF_CONDUCT.md). Report
-suspected vulnerabilities privately as described in the
-[Security Policy](SECURITY.md), and use the support guidance of the affected
-repository for questions and defects. Do not put production data, credentials,
-connection strings, or unredacted reports into issues, pull requests, test
-fixtures, or logs.
+Roles, decisions, and change acceptance are defined in the
+[Project Governance](GOVERNANCE.md). Participation follows the
+[Code of Conduct](CODE_OF_CONDUCT.md). Report suspected vulnerabilities
+privately as described in the [Security Policy](SECURITY.md), and use the
+[Support](SUPPORT.md) guidance for questions and defects. Do not put
+production data, credentials, connection strings, or unredacted reports into
+issues, pull requests, test fixtures, or logs.
 
 ## General Rules
 
