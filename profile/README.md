@@ -52,4 +52,4 @@
 
 </details>
 
-[Setup](https://github.com/doka-labs/.github/blob/main/SETUP.md) &#183; [Architecture](https://github.com/doka-labs/.github/blob/main/ARCHITECTURE.md) &#183; [Privacy](https://github.com/doka-labs/.github/blob/main/PRIVACY.md) &#183; [Contributing](https://github.com/doka-labs/.github/blob/main/CONTRIBUTING.md)
+[Setup](https://github.com/doka-labs/.github/blob/main/SETUP.md) &#183; [Architecture](https://github.com/doka-labs/.github/blob/main/ARCHITECTURE.md) &#183; [Privacy](https://github.com/doka-labs/.github/blob/main/PRIVACY.md) &#183; [Contributing](https://github.com/doka-labs/.github/blob/main/CONTRIBUTING.md) &#183; [Code of Conduct](https://github.com/doka-labs/.github/blob/main/CODE_OF_CONDUCT.md) &#183; [Security](https://github.com/doka-labs/.github/blob/main/SECURITY.md) &#183; [Support](https://github.com/doka-labs/.github/blob/main/SUPPORT.md) &#183; [Governance](https://github.com/doka-labs/.github/blob/main/GOVERNANCE.md)

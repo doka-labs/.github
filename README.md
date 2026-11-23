@@ -52,4 +52,4 @@
 
 </details>
 
-[Setup](SETUP.md) &#183; [Architecture](ARCHITECTURE.md) &#183; [Privacy](PRIVACY.md) &#183; [Contributing](CONTRIBUTING.md)
+[Setup](SETUP.md) &#183; [Architecture](ARCHITECTURE.md) &#183; [Privacy](PRIVACY.md) &#183; [Contributing](CONTRIBUTING.md) &#183; [Code of Conduct](CODE_OF_CONDUCT.md) &#183; [Security](SECURITY.md) &#183; [Support](SUPPORT.md) &#183; [Governance](GOVERNANCE.md)
