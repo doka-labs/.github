@@ -1,0 +1,13 @@
+# Public reports enter through a form, so the maintainer receives the evidence
+# needed for safe routing and reproducible triage.
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability privately
+    url: https://github.com/doka-labs/.github/blob/main/SECURITY.md
+    about: Use private vulnerability reporting; never disclose a vulnerability in a public issue.
+  - name: Report a conduct concern privately
+    url: https://github.com/doka-labs/.github/blob/main/CODE_OF_CONDUCT.md#reporting-an-incident
+    about: Use the private conduct contact, not a public issue or a security advisory.
+  - name: Read the support policy
+    url: https://github.com/doka-labs/.github/blob/main/SUPPORT.md
+    about: Check the right channel, the required details, and safe diagnostic sharing before opening an issue.

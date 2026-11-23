@@ -1,0 +1,85 @@
+name: Bug report
+description: Report a reproducible defect.
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Do not report a vulnerability here; follow the security policy. Use synthetic data and remove credentials,
+        connection strings, personal data, and internal host names from everything you post.
+  - type: textarea
+    id: defect
+    attributes:
+      label: Defect
+      description: What is wrong, in one or two sentences.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The exact package version, or the source revision for an unpublished build.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: >-
+        The .NET, framework, provider, driver, and database engine versions that apply, the operating system and
+        architecture, and any relevant proxy, pooler, or cluster. Write "no database" when none is involved.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: A minimal synthetic reproduction and the exact commands that run it.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include any stable failure code and the exception type.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: Selected logs, generated SQL, query plans, or stack traces, reviewed for sensitive values.
+      render: text
+  - type: dropdown
+    id: regression
+    attributes:
+      label: Regression
+      description: Did this work in an earlier version?
+      options:
+        - "Yes"
+        - "No"
+        - Unknown
+    validations:
+      required: true
+  - type: input
+    id: last-working-version
+    attributes:
+      label: Last working version
+      description: The last version or revision that behaved correctly, if this is a regression.
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Readiness
+      options:
+        - label: I searched the existing issues and read the support policy.
+          required: true
+        - label: This report contains no vulnerability, credentials, or confidential data.
+          required: true

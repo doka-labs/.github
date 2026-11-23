@@ -1,0 +1,55 @@
+name: Support question
+description: Ask about usage, configuration, or a documented capability.
+title: "support: "
+labels:
+  - question
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Support is best effort. Check the README, the documentation, and the existing issues first. Do not post
+        vulnerabilities, credentials, or production data.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The exact package version, or the source revision for an unpublished build.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: >-
+        The .NET, framework, provider, driver, and database engine versions that apply. Write "no database" when none
+        is involved.
+    validations:
+      required: true
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Configuration
+      description: The relevant configuration or code, with credentials and connection strings removed.
+      render: text
+  - type: textarea
+    id: attempts
+    attributes:
+      label: What you tried
+      description: The documentation you read and the approaches you tried, with their results.
+    validations:
+      required: true
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Readiness
+      options:
+        - label: I searched the existing issues and read the support policy.
+          required: true
+        - label: This question contains no vulnerability, credentials, or confidential data.
+          required: true

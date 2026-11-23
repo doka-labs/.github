@@ -1,0 +1,60 @@
+name: Feature request
+description: Propose a capability, compatibility, or documentation improvement.
+title: "feature: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Describe the problem before the solution. A request is evaluated against the supported scope and the cost of a
+        new public contract.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What you cannot do today, and why it matters.
+    validations:
+      required: true
+  - type: input
+    id: surface
+    attributes:
+      label: Affected surface
+      description: The package, API, workflow, or document the change concerns.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: The observable behavior or contract you propose.
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility
+      description: Which versions, platforms, or existing users are affected, and whether the change breaks anything.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: Workarounds or other designs you considered.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Primary sources, measurements, or use cases that support the proposal.
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Readiness
+      options:
+        - label: I searched the existing issues and read the support policy.
+          required: true
+        - label: This request contains no credentials or confidential data.
+          required: true
